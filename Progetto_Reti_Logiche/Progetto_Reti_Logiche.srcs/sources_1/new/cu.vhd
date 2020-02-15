@@ -56,7 +56,7 @@ begin
         end if;
     end process;
     
-    lambda: process(current_state, start, loader_done, writer_done)
+    lambda: process(current_state)
     begin
         case current_state is
             when S0 =>
@@ -92,7 +92,7 @@ begin
         end case;
     end process;
 
-    delta: process(current_state)
+    delta: process(current_state, start, loader_done, writer_done)
     begin
         case current_state is
             when S0 =>
