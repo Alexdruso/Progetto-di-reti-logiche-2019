@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 08.12.2019 19:41:52
+-- Create Date: 16.02.2020 17:37:53
 -- Design Name: 
--- Module Name: Register_D - Behavioral
+-- Module Name: Decoder - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,30 +33,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Register_D is
-
+entity Decoder is
     generic(
-        N: integer := 6
+        N: integer := 3
         );
         
-    port( in1 : in std_logic_vector(N downto 0);
-         clk, rst, load : in std_logic; 
-         out1 : out std_logic_vector(N downto 0) 
-         );
-         
-end Register_D;
+    port(
+        addr: in std_logic_vector(N downto 0);
+        out1: out std_logic_vector(2**N - 1 downto 0)
+    );
+end Decoder;
 
-architecture Behavioral of Register_D is
-begin
-    process(clk, rst) 
+architecture Dataflow of Decoder is
     begin
     
-    if rst = '1' then 
-        out1 <= (others => '0'); 
-    elsif rising_edge(clk) and
-          load = '1'  then 
-        out1 <= in1; 
-        end if; 
-        end process;
+    out1 <= (conv_integer(addr) => '1',
+             others => '0');   
 
-end Behavioral;
+end Dataflow;
