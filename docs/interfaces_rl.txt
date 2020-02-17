@@ -1,0 +1,56 @@
+CU:
+	in:
+		- clk [EXT]
+		- start [EXT]
+		- rst [EXT]
+		- loader_done
+		- writer_done (?)
+	out:
+		- done [EXT]
+		- loader_wz_en
+		- loader_encode_en
+		- writer_en
+
+RAM_DRIVER:
+	in:
+		- addr_ram_from_loader
+		- addr_ram_from_writer
+		- data_ram_from_writer
+		- driver_loader_en
+		- driver_writer_en
+	out:
+		- addr_ram [EXT]
+		- data_ram_out [EXT]
+		- en_ram [EXT]
+		- we_ram [EXT]
+
+LOADER:
+	in:
+		- clk [EXT]
+		- rst [EXT]
+		- data_ram_in [EXT]
+		- loader_wz_en
+		- loader_encode_en
+	out:
+		- loader_done
+		- addr_ram_from_loader
+		- driver_loader_en
+		- addr_reg
+		- data_from_loader
+		- 
+
+DECODER_REG:
+	in:
+		- addr_reg
+	out:
+		- en_reg_1
+		- ...
+		- en_reg_8
+
+REG[*]:
+	in:
+		- reg_w_en
+		- data_in
+	out:
+		- data_out
+		
