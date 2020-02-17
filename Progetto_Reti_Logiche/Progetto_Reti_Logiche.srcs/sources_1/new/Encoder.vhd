@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 17.02.2020 17:40:36
+-- Create Date: 17.02.2020 21:08:18
 -- Design Name: 
--- Module Name: Execution_lane - Dataflow
+-- Module Name: Encoder - Dataflow
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -21,7 +21,6 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,23 +31,33 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Execution_lane is
+entity Encoder is
+    generic(
+        N : integer := 7
+        );
+    
+    port(
+        wz0,wz1,wz2,wz3,wz4,wz5,wz6,wz7,to_be_coded : std_logic_vector(N downto 0);
+        coded_result : out std_logic_vector(N downto 0)
+        );
+end Encoder;
+
+architecture Dataflow of Encoder is
+
+component Execution_lane is
 
      port(
         wz_vector,data_in : in std_logic_vector(7 downto 0);
         valid : out std_logic;
         offset : out std_logic_vector(3 downto 0)
         );  
-end Execution_lane;
+        
+end component;
 
-
-architecture Dataflow of Execution_lane is
-
-signal diff : std_logic_vector(7 downto 0);
+signal os0,os1,os2,os3,os4,os5,os6,os7 : std_logic_vector(3 downto 0);
+signal v0,v1,v2,v3,v4,v5,v6,v7 : std_logic;
 
 begin
 
-diff <= data_in+wz_vector+1;
-offset<=diff;
-valid <= not( diff(7) or diff(6) or diff(5) or diff(4) or diff(3) or diff(2) );
+
 end Dataflow;
