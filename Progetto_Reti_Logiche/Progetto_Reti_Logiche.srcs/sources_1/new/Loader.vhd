@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 08.12.2019 19:41:52
+-- Create Date: 17.02.2020 15:17:40
 -- Design Name: 
--- Module Name: Register_D - Behavioral
+-- Module Name: Loader - Dataflow
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,30 +31,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Register_D is
-
+entity Loader is
     generic(
-        N: integer := 6
+        N: integer := 3
         );
         
-    port( in1 : in std_logic_vector(N downto 0);
-         clk, rst, load : in std_logic; 
-         out1 : out std_logic_vector(N downto 0) 
-         );
-         
-end Register_D;
+    port(
+        clk,rst,loader_wz_en,loader_encode_en: in std_logic;
+		data_ram_in: in std_logic_vector(7 downto 0);
+		loader_done,driver_loader_en: out std_logic;
+		addr_ram_from_loader: out std_logic_vector(15 downto 0);
+		addr_reg: out std_logic_vector(N downto 0);
+		data_from_loader: out std_logic_vector(7 downto 0)
+		);
+end Loader;
 
-architecture Behavioral of Register_D is
+architecture Dataflow of Loader is
+
 begin
-    process(clk, rst, load) 
-    begin
-    
-    if rst = '1' then 
-        out1 <= (others => '0'); 
-    elsif rising_edge(clk) and
-          load = '1'  then 
-        out1 <= in1; 
-        end if; 
-        end process;
 
-end Behavioral;
+
+end Dataflow;

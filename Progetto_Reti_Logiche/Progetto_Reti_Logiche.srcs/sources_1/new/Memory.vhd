@@ -39,7 +39,7 @@ entity Memory is
         
     port(
     
-        addr : in std_logic_vector(3 downto 0);  
+        addr_reg : in std_logic_vector(3 downto 0);  
         data_in : in std_logic_vector(N downto 0);
         clk,rst : in std_logic;
         data0 : out std_logic_vector(N+1 downto 0);
@@ -78,7 +78,7 @@ signal out0,out1,out2,out3,out4, out5, out6, out7 : std_logic_vector(N downto 0)
 
 begin
 
-    D: Decoder port map (addr=>addr,out1=>sel);
+    D: Decoder port map (addr=>addr_reg,out1=>sel);
     R0: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(0),out1=>out0);
     R1: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(1),out1=>out1);
     R2: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(2),out1=>out2);
