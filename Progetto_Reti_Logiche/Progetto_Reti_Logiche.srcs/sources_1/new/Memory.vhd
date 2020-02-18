@@ -32,24 +32,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Memory is
-
-    generic(
-        N : integer := 6
-        );
-        
     port(
     
         addr_reg : in std_logic_vector(3 downto 0);  
-        data_in : in std_logic_vector(N downto 0);
+        data_in : in std_logic_vector(6 downto 0);
         clk,rst : in std_logic;
-        data0 : out std_logic_vector(N+1 downto 0);
-        data1 : out std_logic_vector(N+1 downto 0);
-        data2 : out std_logic_vector(N+1 downto 0);
-        data3 : out std_logic_vector(N+1 downto 0);
-        data4 : out std_logic_vector(N+1 downto 0);
-        data5 : out std_logic_vector(N+1 downto 0);
-        data6 : out std_logic_vector(N+1 downto 0);
-        data7 : out std_logic_vector(N+1 downto 0)
+        data0 : out std_logic_vector(7 downto 0);
+        data1 : out std_logic_vector(7 downto 0);
+        data2 : out std_logic_vector(7 downto 0);
+        data3 : out std_logic_vector(7 downto 0);
+        data4 : out std_logic_vector(7 downto 0);
+        data5 : out std_logic_vector(7 downto 0);
+        data6 : out std_logic_vector(7 downto 0);
+        data7 : out std_logic_vector(7 downto 0)
         
         );
                             
@@ -58,27 +53,34 @@ end Memory;
 architecture Dataflow of Memory is
 
 component Decoder 
+
+    generic(
+        N: integer := 3
+        );
+        
     port(
-        addr: in std_logic_vector(3 downto 0);
-        out1: out std_logic_vector(7 downto 0)
+        addr: in std_logic_vector(N downto 0);
+        out1: out std_logic_vector(2**N-1 downto 0)
    );
 end component; 
 
 component Register_D
     port(
-        in1 : in std_logic_vector(N downto 0);
+        in1 : in std_logic_vector(6 downto 0);
         clk, rst, load : in std_logic; 
-        out1 : out std_logic_vector(N downto 0)
+        out1 : out std_logic_vector(6 downto 0)
         );
 end component;        
         
 
 signal sel : std_logic_vector(7 downto 0);
-signal out0,out1,out2,out3,out4, out5, out6, out7 : std_logic_vector(N downto 0);
+signal out0,out1,out2,out3,out4, out5, out6, out7 : std_logic_vector(6 downto 0);
 
 begin
 
-    D: Decoder port map (addr=>addr_reg,out1=>sel);
+    D: Decoder
+        generic map(N=>3) 
+        port map (addr=>addr_reg,out1=>sel);
     R0: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(0),out1=>out0);
     R1: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(1),out1=>out1);
     R2: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(2),out1=>out2);

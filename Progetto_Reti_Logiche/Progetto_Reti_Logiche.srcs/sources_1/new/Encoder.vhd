@@ -32,13 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Encoder is
-    generic(
-        N : integer := 7
-        );
-    
     port(
-        wz0,wz1,wz2,wz3,wz4,wz5,wz6,wz7,to_be_coded : std_logic_vector(N downto 0);
-        coded_result : out std_logic_vector(N downto 0)
+        wz0,wz1,wz2,wz3,wz4,wz5,wz6,wz7,to_be_coded : std_logic_vector(7 downto 0);
+        coded_result : out std_logic_vector(7 downto 0)
         );
 end Encoder;
 
@@ -55,9 +51,13 @@ component Execution_lane is
 end component;
 
 component Decoder 
+    generic(
+        N: integer := 3
+        );
+        
     port(
-        addr: in std_logic_vector(1 downto 0);
-        out1: out std_logic_vector(3 downto 0)
+        addr: in std_logic_vector(N downto 0);
+        out1: out std_logic_vector(2**N - 1 downto 0)
    );
 end component; 
 
@@ -90,7 +90,9 @@ valid_offset<= os0 when v0='1' else
                os7 when v7='1' else
                "--";
            
-D: Decoder port map(addr=>valid_offset, out1=>one_hot_offset);           
+D: Decoder 
+    generic map(N=>1)
+    port map(addr=>valid_offset, out1=>one_hot_offset);           
                
 wz_num<= "000" when v0='1' else
      "001" when v1='1' else
