@@ -36,7 +36,7 @@ entity Memory is
     
         addr_reg : in std_logic_vector(3 downto 0);  
         data_in : in std_logic_vector(6 downto 0);
-        clk,rst : in std_logic;
+        clk,rst,we : in std_logic;
         data0 : out std_logic_vector(7 downto 0);
         data1 : out std_logic_vector(7 downto 0);
         data2 : out std_logic_vector(7 downto 0);
@@ -73,22 +73,28 @@ component Register_D
 end component;        
         
 
-signal sel : std_logic_vector(7 downto 0);
+signal sel , sel_enabled : std_logic_vector(7 downto 0);
 signal out0,out1,out2,out3,out4, out5, out6, out7 : std_logic_vector(6 downto 0);
 
 begin
 
     D: Decoder
         generic map(N=>3) 
-        port map (addr=>addr_reg,out1=>sel);
-    R0: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(0),out1=>out0);
-    R1: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(1),out1=>out1);
-    R2: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(2),out1=>out2);
-    R3: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(3),out1=>out3);
-    R4: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(4),out1=>out4);
-    R5: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(5),out1=>out5);
-    R6: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(6),out1=>out6);
-    R7: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel(7),out1=>out7);
+        port map (addr=>addr_reg,out1=>sel); 
+           
+    enable_signal:
+    for i in 7 downto 0 generate
+        sel_enabled(i)<= (sel(i) and we);
+    end generate;    
+        
+    R0: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(0),out1=>out0);
+    R1: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(1),out1=>out1);
+    R2: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(2),out1=>out2);
+    R3: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(3),out1=>out3);
+    R4: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(4),out1=>out4);
+    R5: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(5),out1=>out5);
+    R6: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(6),out1=>out6);
+    R7: Register_D port map(in1=>data_in,clk=>clk,rst=>rst,load=>sel_enabled(7),out1=>out7);
     data0<='1'&out0;
     data1<='1'&out1;
     data2<='1'&out2;
