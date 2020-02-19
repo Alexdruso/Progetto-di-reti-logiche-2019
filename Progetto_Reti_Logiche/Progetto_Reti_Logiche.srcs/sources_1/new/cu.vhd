@@ -31,19 +31,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity cu is
-    Port ( clk : in STD_LOGIC;
-           start : in STD_LOGIC;
-           rst : in STD_LOGIC;
-           loader_done : in STD_LOGIC;
-           writer_done : in STD_LOGIC;
+entity CU is
+    Port ( clk,start,rst,loader_done,writer_done,encode_read_done : in STD_LOGIC;
            done : out STD_LOGIC;
            loader_wz_en : out STD_LOGIC;
            loader_encode_en : out STD_LOGIC;
            writer_en : out STD_LOGIC);
-end cu;
+end CU;
 
-architecture behavioral of cu is
+architecture Behavioral of CU is
 type state_type is (S0, S1, S2, S3, S4, S5);
 signal next_state, current_state : state_type;
 begin
@@ -122,4 +118,4 @@ begin
         end case;
     end process;
 
-end behavioral;
+end Behavioral;

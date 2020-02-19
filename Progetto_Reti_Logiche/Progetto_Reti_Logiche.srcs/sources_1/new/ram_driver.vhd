@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ram_driver is
+entity Ram_driver is
     Port ( addr_ram_from_loader : in STD_LOGIC_VECTOR (3 downto 0);
            addr_ram_from_writer : in STD_LOGIC_VECTOR (3 downto 0);
            data_ram_from_writer : in STD_LOGIC_VECTOR (7 downto 0);
@@ -41,9 +41,9 @@ entity ram_driver is
            data_ram_out : out STD_LOGIC_VECTOR (7 downto 0);
            en_ram : out STD_LOGIC;
            we_ram : out STD_LOGIC);
-end ram_driver;
+end Ram_driver;
 
-architecture behavioral of ram_driver is
+architecture Dataflow of Ram_driver is
 signal padded_addr_ram_from_loader : STD_LOGIC_VECTOR (15 downto 0);
 signal padded_addr_ram_from_writer : STD_LOGIC_VECTOR (15 downto 0);
 begin
@@ -57,4 +57,4 @@ begin
                 padded_addr_ram_from_writer  when driver_loader_en='0' and driver_writer_en='1' else
                 "----------------";
 
-end behavioral;
+end Dataflow;
