@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 17.02.2020 15:17:40
+-- Create Date: 19.02.2020 16:17:39
 -- Design Name: 
--- Module Name: Loader - Dataflow
+-- Module Name: Writer - Dataflow
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,28 +31,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Loader is
-        
+entity Writer is
     port(
-        clk,rst,loader_wz_en,loader_encode_en: in std_logic;
-		data_ram_in: in std_logic_vector(7 downto 0);
-		loader_done,driver_loader_en: out std_logic;
-		addr_ram_from_loader: out std_logic_vector(3 downto 0);
-		addr_reg: out std_logic_vector(2 downto 0);
-		data_from_loader: out std_logic_vector(7 downto 0)
-		);
-end Loader;
+        data_in : in std_logic_vector(7 downto 0); 
+        write_control : in std_logic; 
+        data_to_write : out std_logic_vector(7 downto 0); 
+        address_to_write : out std_logic_vector(3 downto 0); 
+        write_enable, writer_done : out std_logic 
+        );
+end Writer;
 
-architecture Dataflow of Loader is
-
-signal addr : std_logic_vector(3 downto 0);
-
+architecture Dataflow of Writer is
+    
 begin
 
-    data_from_loader <= data_ram_in;
-    driver_loader_en <= loader_wz_en or loader_encode_en;
-    addr_reg <= addr(2 downto 0);
-    addr_ram_from_loader <= addr;
-    
-        
+    data_to_write<=data_in;
+    address_to_write<="1001";
+    write_enable<=write_control;
+    writer_done<='1'; --secondo me è eliminabile, non aggiunge informazione
+
 end Dataflow;
