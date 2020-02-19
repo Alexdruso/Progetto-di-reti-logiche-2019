@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity CU is
-    Port ( clk,start,rst,loader_done,writer_done,encode_read_done : in STD_LOGIC;
+    Port ( clk,start,rst,loader_done,writer_done : in STD_LOGIC;
            done : out STD_LOGIC;
            loader_wz_en : out STD_LOGIC;
            loader_encode_en : out STD_LOGIC;
@@ -85,6 +85,11 @@ begin
                 loader_wz_en <= '0';
                 loader_encode_en <= '0';
                 writer_en <= '0';
+            when others =>
+                done <= '-';
+                loader_wz_en <= '-';
+                loader_encode_en <= '-';
+                writer_en <= '-';
         end case;
     end process;
 
@@ -94,27 +99,41 @@ begin
             when S0 =>
                 if start = '1' then
                     next_state <= S1;
+                else
+                    next_state <= S0;
                 end if;
             when S1 =>
                 if loader_done = '1' then
                     next_state <= S2;
+                else
+                    next_state <= S1;
                 end if;
             when S2 =>
                 if loader_done = '1' then
                     next_state <= S3;
+                else
+                    next_state <= S2;
                 end if;
             when S3 =>
                 if writer_done = '1' then
                     next_state <= S4;
+                else
+                    next_state <= S3;
                 end if;
             when S4 =>
                 if start = '0' then
                     next_state <= S5;
+                else
+                    next_state <= S4;
                 end if;
             when S5 =>
                 if start = '1' then
                     next_state <= S2;
+                else
+                    next_state <= S5;
                 end if;
+            when others =>
+                next_state <= current_state;
         end case;
     end process;
 
