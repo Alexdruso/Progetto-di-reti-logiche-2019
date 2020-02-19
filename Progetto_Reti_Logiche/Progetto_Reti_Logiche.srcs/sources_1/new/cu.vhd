@@ -40,7 +40,7 @@ entity CU is
 end CU;
 
 architecture Behavioral of CU is
-type state_type is (S0, S1, S2, S3, S4, S5);
+type state_type is (S0, S1, S2, S3, S4, S5); --e se riducessimo gli stati a stop, start e done?
 signal next_state, current_state : state_type;
 begin
     process(clk, rst)
