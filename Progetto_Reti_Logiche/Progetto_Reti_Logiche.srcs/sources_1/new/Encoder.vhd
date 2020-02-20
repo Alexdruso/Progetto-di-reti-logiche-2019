@@ -33,39 +33,38 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Encoder is
     port(
-        wz0,wz1,wz2,wz3,wz4,wz5,wz6,wz7,to_be_coded : std_logic_vector(7 downto 0);
-        coded_result : out std_logic_vector(7 downto 0)
-        );
+        wz0, wz1, wz2, wz3, wz4, wz5, wz6, wz7, to_be_coded: std_logic_vector(7 downto 0);
+        coded_result: out std_logic_vector(7 downto 0)
+    );
 end Encoder;
 
 architecture Dataflow of Encoder is
 
 component Execution_lane is
-
      port(
-        wz_vector,data_in : in std_logic_vector(7 downto 0);
-        valid : out std_logic;
-        offset : out std_logic_vector(1 downto 0)
-        );  
+        wz_vector, data_in: in std_logic_vector(7 downto 0);
+        valid: out std_logic;
+        offset: out std_logic_vector(1 downto 0)
+    );  
         
 end component;
 
 component Decoder 
     generic(
-        N: integer := 3
-        );
+        N: integer := 4
+    );
         
     port(
-        addr: in std_logic_vector(N downto 0);
-        out1: out std_logic_vector(2**N - 1 downto 0)
-   );
+        addr: in std_logic_vector(N-1 downto 0);
+        out1: out std_logic_vector((2**N) - 1 downto 0)
+    );
 end component; 
 
-signal os0,os1,os2,os3,os4,os5,os6,os7,valid_offset : std_logic_vector(1 downto 0);
+signal os0, os1, os2, os3, os4, os5, os6, os7, valid_offset: std_logic_vector(1 downto 0);
 signal wz_num: std_logic_vector(2 downto 0);
-signal one_hot_offset : std_logic_vector(3 downto 0);
+signal one_hot_offset: std_logic_vector(3 downto 0);
 signal coded_input: std_logic_vector(7 downto 0);
-signal v0,v1,v2,v3,v4,v5,v6,v7,valid : std_logic;
+signal v0, v1, v2, v3, v4, v5, v6, v7, valid: std_logic;
 
 begin
 
@@ -90,8 +89,8 @@ valid_offset<= os0 when v0='1' else
                os7 when v7='1' else
                "--";
            
-D: Decoder 
-    generic map(N=>1)
+D: Decoder
+    generic map(N=>2)
     port map(addr=>valid_offset, out1=>one_hot_offset);           
                
 wz_num<= "000" when v0='1' else

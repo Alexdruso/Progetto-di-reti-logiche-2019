@@ -32,15 +32,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Ram_driver is
-    Port ( addr_ram_from_loader : in STD_LOGIC_VECTOR (3 downto 0);
-           addr_ram_from_writer : in STD_LOGIC_VECTOR (3 downto 0);
-           data_ram_from_writer : in STD_LOGIC_VECTOR (7 downto 0);
-           driver_loader_en : in STD_LOGIC;
-           driver_writer_en : in STD_LOGIC;
-           addr_ram : out STD_LOGIC_VECTOR (15 downto 0);
-           data_ram_out : out STD_LOGIC_VECTOR (7 downto 0);
-           en_ram : out STD_LOGIC;
-           we_ram : out STD_LOGIC);
+    Port (
+        addr_ram_from_loader: in STD_LOGIC_VECTOR (3 downto 0);
+        addr_ram_from_writer: in STD_LOGIC_VECTOR (3 downto 0);
+        data_ram_from_writer: in STD_LOGIC_VECTOR (7 downto 0);
+        driver_loader_en: in STD_LOGIC;
+        driver_writer_en: in STD_LOGIC;
+        addr_ram: out STD_LOGIC_VECTOR (15 downto 0);
+        data_ram_out: out STD_LOGIC_VECTOR (7 downto 0);
+        en_ram: out STD_LOGIC;
+        we_ram: out STD_LOGIC
+    );
 end Ram_driver;
 
 architecture Dataflow of Ram_driver is

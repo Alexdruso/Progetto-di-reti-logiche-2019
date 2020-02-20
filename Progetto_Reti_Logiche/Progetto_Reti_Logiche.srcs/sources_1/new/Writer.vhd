@@ -37,8 +37,8 @@ entity Writer is
         write_control : in std_logic; 
         data_to_write : out std_logic_vector(7 downto 0); 
         address_to_write : out std_logic_vector(3 downto 0); 
-        write_enable, writer_done : out std_logic 
-        );
+        write_enable : out std_logic 
+    );
 end Writer;
 
 architecture Dataflow of Writer is
@@ -48,6 +48,5 @@ begin
     data_to_write<=data_in;
     address_to_write<="1001";
     write_enable<=write_control;
-    writer_done<='1'; --secondo me è eliminabile, non aggiunge informazione
 
 end Dataflow;

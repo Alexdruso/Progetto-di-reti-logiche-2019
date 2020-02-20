@@ -35,19 +35,21 @@ use ieee.std_logic_unsigned.all;
 
 entity Decoder is
     generic(
-        N: integer := 3
-        );
+        N: integer := 4
+    );
         
     port(
-        addr: in std_logic_vector(N downto 0);
-        out1: out std_logic_vector(2**N - 1 downto 0)
+        addr: in std_logic_vector(N-1 downto 0);
+        out1: out std_logic_vector((2**N) - 1 downto 0)
     );
 end Decoder;
 
 architecture Dataflow of Decoder is
     begin
     
-    out1 <= (conv_integer(addr) => '1',
-             others => '0');   
+    out1 <= (
+        conv_integer(addr) => '1',
+        others => '0'
+    );   
 
 end Dataflow;

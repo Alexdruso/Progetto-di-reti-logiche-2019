@@ -4,7 +4,6 @@ CU:
 		- start [EXT]
 		- rst [EXT]
 		- loader_done
-		- writer_done (?)
 	out:
 		- done [EXT]
 		- loader_wz_en
@@ -37,29 +36,45 @@ LOADER:
 		- driver_loader_en
 		- addr_reg
 		- data_from_loader
-		- 
+		- reg_we
 
-DECODER_REG:
+DECODER:
 	in:
-		- addr_reg
+		- addr
 	out:
-		- en_reg_1
-		- ...
-		- en_reg_8
+		- out1 (vector 2^N-1..0)
 
 REG[*]:
 	in:
-		- reg_w_en
-		- data_in
+		- load
+		- in1
+		- clk [EXT]
+		- rst [EXT]
 	out:
-		- data_out
+		- out1
+
+MEMORY:
+	in:
+		- addr_reg
+		- data_in
+		- clk [EXT]
+		- rst [EXT]
+		- we
+	out:
+		- data[0..7]
 
 ENCODER:
 	in:
-		-wz0
-		-...
-		-wz7
+		-wz[0..7]
 		-to_be_encoded
 	out:
 		-coded_result
-		
+
+WRITER:
+	in:
+		- data_in
+		- write_control
+	out:
+		- data_to_write
+		- address_to_write
+		- write_enable

@@ -22,17 +22,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity CU is
-    Port ( clk,start,rst,loader_done,writer_done : in STD_LOGIC;
+    Port ( clk,start,rst,loader_done : in STD_LOGIC;
            done : out STD_LOGIC;
            loader_wz_en : out STD_LOGIC;
            loader_encode_en : out STD_LOGIC;
@@ -93,7 +85,7 @@ begin
         end case;
     end process;
 
-    delta: process(current_state, start, loader_done, writer_done)
+    delta: process(current_state, start, loader_done)
     begin
         case current_state is
             when S0 =>
@@ -115,11 +107,7 @@ begin
                     next_state <= S2;
                 end if;
             when S3 =>
-                if writer_done = '1' then
-                    next_state <= S4;
-                else
-                    next_state <= S3;
-                end if;
+                next_state <= S4;
             when S4 =>
                 if start = '0' then
                     next_state <= S5;

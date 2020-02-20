@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 22.31.01 on 20/02/20
+## File last modified by Fizzim: 22.30.06 on 20/02/20
 <version>
    14.02.26
 </version>
@@ -299,10 +299,10 @@
 </tabs>
 ## START PREFERENCES
 <SCounter>
-9
+6
 </SCounter>
 <TCounter>
-13
+8
 </TCounter>
 <TableVis>
 true
@@ -342,10 +342,10 @@ false
 <textObj>
 fzm_globalTable
    <x>
-   7
+   10
    </x>
    <y>
-   19
+   10
    </y>
    <page>
    1
@@ -401,10 +401,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         -1
+         1
          </x2Obj>
          <y2Obj>
-         18
+         17
          </y2Obj>
          <page>
          1
@@ -412,16 +412,16 @@ fzm_globalTable
       </name>
    </attributes>
    <x0>
-   83
+   50
    </x0>
    <y0>
-   256
+   172
    </y0>
    <x1>
-   133
+   100
    </x1>
    <y1>
-   306
+   222
    </y1>
    <reset>
    false
@@ -434,6 +434,166 @@ fzm_globalTable
    </color>
 </state>
 ## END STATE OBJECT
+## START LOOPBACK TRANSITION OBJECT
+<transition>
+   <attributes>
+      <name>
+            <status>
+            ABS
+            </status>
+         <value>
+         load_wz_en=0
+            <status>
+            LOCAL
+            </status>
+         </value>
+         <vis>
+         0
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         0
+         </x2Obj>
+         <y2Obj>
+         0
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </name>
+      <equation>
+            <status>
+            ABS
+            </status>
+         <value>
+         load_wz_en=0
+            <status>
+            LOCAL
+            </status>
+         </value>
+         <vis>
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         -4
+         </x2Obj>
+         <y2Obj>
+         11
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </equation>
+   </attributes>
+   <startState>
+   S0
+   </startState>
+   <endState>
+   S0
+   </endState>
+   <startPtX>
+   79.0
+   </startPtX>
+   <startPtY>
+   221.0
+   </startPtY>
+   <endPtX>
+   58.0
+   </endPtX>
+   <endPtY>
+   216.0
+   </endPtY>
+   <startCtrlPtX>
+   79.0
+   </startCtrlPtX>
+   <startCtrlPtY>
+   253.0
+   </startCtrlPtY>
+   <endCtrlPtY>
+   40.0
+   </endCtrlPtY>
+   <endCtrlPtY>
+   241.0
+   </endCtrlPtY>
+   <startStateIndex>
+   8
+   </startStateIndex>
+   <endStateIndex>
+   13
+   </endStateIndex>
+   <page>
+   1
+   </page>
+   <color>
+   -16777216
+   </color>
+</transition>
+## START LOOPBACK TRANSITION OBJECT
 ## START STATE OBJECT
 <state>
    <attributes>
@@ -487,7 +647,7 @@ fzm_globalTable
          1
          </x2Obj>
          <y2Obj>
-         17
+         19
          </y2Obj>
          <page>
          1
@@ -495,16 +655,16 @@ fzm_globalTable
       </name>
    </attributes>
    <x0>
-   206
+   200
    </x0>
    <y0>
-   257
+   165
    </y0>
    <x1>
-   256
+   250
    </x1>
    <y1>
-   307
+   215
    </y1>
    <reset>
    false
@@ -517,7 +677,7 @@ fzm_globalTable
    </color>
 </state>
 ## END STATE OBJECT
-## START LOOPBACK TRANSITION OBJECT
+## START STATE TRANSITION OBJECT
 <transition>
    <attributes>
       <name>
@@ -581,7 +741,138 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         start=0
+         loader_wz_en=1
+            <status>
+            LOCAL
+            </status>
+         </value>
+         <vis>
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         0
+         </x2Obj>
+         <y2Obj>
+         -9
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </equation>
+   </attributes>
+   <startState>
+   S0
+   </startState>
+   <endState>
+   S1
+   </endState>
+   <startPtX>
+   99.0
+   </startPtX>
+   <startPtY>
+   192.0
+   </startPtY>
+   <endPtX>
+   200.0
+   </endPtX>
+   <endPtY>
+   190.0
+   </endPtY>
+   <startCtrlPtX>
+   126.0
+   </startCtrlPtX>
+   <startCtrlPtY>
+   192.0
+   </startCtrlPtY>
+   <endCtrlPtY>
+   170.0
+   </endCtrlPtY>
+   <endCtrlPtY>
+   190.0
+   </endCtrlPtY>
+   <startStateIndex>
+   35
+   </startStateIndex>
+   <endStateIndex>
+   18
+   </endStateIndex>
+   <page>
+   1
+   </page>
+   <color>
+   -16777216
+   </color>
+   <pageSX>
+   0.0
+   </pageSX>
+   <pageSY>
+   0.0
+   </pageSY>
+   <pageSCX>
+   0.0
+   </pageSCX>
+   <pageSCY>
+   0.0
+   </pageSCY>
+   <pageEX>
+   0.0
+   </pageEX>
+   <pageEY>
+   0.0
+   </pageEY>
+   <pageECX>
+   0.0
+   </pageECX>
+   <pageECY>
+   0.0
+   </pageECY>
+   <stub>
+   false
+   </stub>
+</transition>
+## END STATE TRANSITION OBJECT
+## START STATE OBJECT
+<state>
+   <attributes>
+      <name>
+            <status>
+            ABS
+            </status>
+         <value>
+         S2..S8
             <status>
             LOCAL
             </status>
@@ -626,57 +917,36 @@ fzm_globalTable
          1
          </x2Obj>
          <y2Obj>
-         1
+         16
          </y2Obj>
          <page>
          1
          </page>
-      </equation>
+      </name>
    </attributes>
-   <startState>
-   S0
-   </startState>
-   <endState>
-   S0
-   </endState>
-   <startPtX>
-   86.0
-   </startPtX>
-   <startPtY>
-   268.0
-   </startPtY>
-   <endPtX>
-   103.0
-   </endPtX>
-   <endPtY>
-   256.0
-   </endPtY>
-   <startCtrlPtX>
-   58.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   251.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   97.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   224.0
-   </endCtrlPtY>
-   <startStateIndex>
-   21
-   </startStateIndex>
-   <endStateIndex>
-   26
-   </endStateIndex>
+   <x0>
+   358
+   </x0>
+   <y0>
+   169
+   </y0>
+   <x1>
+   408
+   </x1>
+   <y1>
+   219
+   </y1>
+   <reset>
+   false
+   </reset>
    <page>
    1
    </page>
    <color>
    -16777216
    </color>
-</transition>
-## START LOOPBACK TRANSITION OBJECT
+</state>
+## END STATE OBJECT
 ## START STATE TRANSITION OBJECT
 <transition>
    <attributes>
@@ -741,7 +1011,138 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         start=1
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </value>
+         <vis>
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         -85
+         </x2Obj>
+         <y2Obj>
+         -168
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </equation>
+   </attributes>
+   <startState>
+   S1
+   </startState>
+   <endState>
+   S2..S8
+   </endState>
+   <startPtX>
+   249.0
+   </startPtX>
+   <startPtY>
+   185.0
+   </startPtY>
+   <endPtX>
+   359.0
+   </endPtX>
+   <endPtY>
+   185.0
+   </endPtY>
+   <startCtrlPtX>
+   284.0
+   </startCtrlPtX>
+   <startCtrlPtY>
+   185.0
+   </startCtrlPtY>
+   <endCtrlPtY>
+   323.0
+   </endCtrlPtY>
+   <endCtrlPtY>
+   185.0
+   </endCtrlPtY>
+   <startStateIndex>
+   35
+   </startStateIndex>
+   <endStateIndex>
+   20
+   </endStateIndex>
+   <page>
+   1
+   </page>
+   <color>
+   -16777216
+   </color>
+   <pageSX>
+   0.0
+   </pageSX>
+   <pageSY>
+   0.0
+   </pageSY>
+   <pageSCX>
+   0.0
+   </pageSCX>
+   <pageSCY>
+   0.0
+   </pageSCY>
+   <pageEX>
+   0.0
+   </pageEX>
+   <pageEY>
+   0.0
+   </pageEY>
+   <pageECX>
+   0.0
+   </pageECX>
+   <pageECY>
+   0.0
+   </pageECY>
+   <stub>
+   false
+   </stub>
+</transition>
+## END STATE TRANSITION OBJECT
+## START STATE OBJECT
+<state>
+   <attributes>
+      <name>
+            <status>
+            ABS
+            </status>
+         <value>
+         S9
             <status>
             LOCAL
             </status>
@@ -783,88 +1184,40 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         1
+         0
          </x2Obj>
          <y2Obj>
-         -9
+         17
          </y2Obj>
          <page>
          1
          </page>
-      </equation>
+      </name>
    </attributes>
-   <startState>
-   S0
-   </startState>
-   <endState>
-   S1
-   </endState>
-   <startPtX>
-   132.0
-   </startPtX>
-   <startPtY>
-   276.0
-   </startPtY>
-   <endPtX>
-   206.0
-   </endPtX>
-   <endPtY>
-   277.0
-   </endPtY>
-   <startCtrlPtX>
-   151.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   276.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   187.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   277.0
-   </endCtrlPtY>
-   <startStateIndex>
-   35
-   </startStateIndex>
-   <endStateIndex>
-   19
-   </endStateIndex>
+   <x0>
+   507
+   </x0>
+   <y0>
+   173
+   </y0>
+   <x1>
+   557
+   </x1>
+   <y1>
+   223
+   </y1>
+   <reset>
+   false
+   </reset>
    <page>
    1
    </page>
    <color>
    -16777216
    </color>
-   <pageSX>
-   0.0
-   </pageSX>
-   <pageSY>
-   0.0
-   </pageSY>
-   <pageSCX>
-   0.0
-   </pageSCX>
-   <pageSCY>
-   0.0
-   </pageSCY>
-   <pageEX>
-   0.0
-   </pageEX>
-   <pageEY>
-   0.0
-   </pageEY>
-   <pageECX>
-   0.0
-   </pageECX>
-   <pageECY>
-   0.0
-   </pageECY>
-   <stub>
-   false
-   </stub>
-</transition>
-## END STATE TRANSITION OBJECT
-## START LOOPBACK TRANSITION OBJECT
+</state>
+## END STATE OBJECT
+## START STATE TRANSITION OBJECT
 <transition>
    <attributes>
       <name>
@@ -928,9 +1281,9 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         loader_done=0
+         1
             <status>
-            LOCAL
+            GLOBAL_VAR
             </status>
          </value>
          <vis>
@@ -970,10 +1323,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         11
+         -19
          </x2Obj>
          <y2Obj>
-         3
+         -169
          </y2Obj>
          <page>
          1
@@ -981,40 +1334,40 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S1
+   S2..S8
    </startState>
    <endState>
-   S1
+   S9
    </endState>
    <startPtX>
-   222.0
+   407.0
    </startPtX>
    <startPtY>
-   258.0
+   189.0
    </startPtY>
    <endPtX>
-   243.0
+   507.0
    </endPtX>
    <endPtY>
-   260.0
+   193.0
    </endPtY>
    <startCtrlPtX>
-   211.0
+   436.0
    </startCtrlPtX>
    <startCtrlPtY>
-   228.0
+   189.0
    </startCtrlPtY>
    <endCtrlPtY>
-   258.0
+   477.0
    </endCtrlPtY>
    <endCtrlPtY>
-   232.0
+   193.0
    </endCtrlPtY>
    <startStateIndex>
-   25
+   35
    </startStateIndex>
    <endStateIndex>
-   30
+   19
    </endStateIndex>
    <page>
    1
@@ -1022,8 +1375,35 @@ fzm_globalTable
    <color>
    -16777216
    </color>
+   <pageSX>
+   0.0
+   </pageSX>
+   <pageSY>
+   0.0
+   </pageSY>
+   <pageSCX>
+   0.0
+   </pageSCX>
+   <pageSCY>
+   0.0
+   </pageSCY>
+   <pageEX>
+   0.0
+   </pageEX>
+   <pageEY>
+   0.0
+   </pageEY>
+   <pageECX>
+   0.0
+   </pageECX>
+   <pageECY>
+   0.0
+   </pageECY>
+   <stub>
+   false
+   </stub>
 </transition>
-## START LOOPBACK TRANSITION OBJECT
+## END STATE TRANSITION OBJECT
 ## START STATE OBJECT
 <state>
    <attributes>
@@ -1032,7 +1412,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S2
+         S11
             <status>
             LOCAL
             </status>
@@ -1074,10 +1454,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         -2
+         2
          </x2Obj>
          <y2Obj>
-         15
+         19
          </y2Obj>
          <page>
          1
@@ -1085,16 +1465,16 @@ fzm_globalTable
       </name>
    </attributes>
    <x0>
-   359
+   635
    </x0>
    <y0>
-   258
+   169
    </y0>
    <x1>
-   409
+   685
    </x1>
    <y1>
-   308
+   219
    </y1>
    <reset>
    false
@@ -1171,9 +1551,9 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         loader_done=1
+         1
             <status>
-            LOCAL
+            GLOBAL_VAR
             </status>
          </value>
          <vis>
@@ -1213,10 +1593,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         0
+         -8
          </x2Obj>
          <y2Obj>
-         -7
+         -147
          </y2Obj>
          <page>
          1
@@ -1224,40 +1604,40 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S1
+   S9
    </startState>
    <endState>
-   S2
+   S11
    </endState>
    <startPtX>
-   255.0
+   556.0
    </startPtX>
    <startPtY>
-   277.0
+   193.0
    </startPtY>
    <endPtX>
-   359.0
+   635.0
    </endPtX>
    <endPtY>
-   278.0
+   194.0
    </endPtY>
    <startCtrlPtX>
-   273.0
+   577.0
    </startCtrlPtX>
    <startCtrlPtY>
-   277.0
+   193.0
    </startCtrlPtY>
    <endCtrlPtY>
-   340.0
+   613.0
    </endCtrlPtY>
    <endCtrlPtY>
-   278.0
+   194.0
    </endCtrlPtY>
    <startStateIndex>
    35
    </startStateIndex>
    <endStateIndex>
-   19
+   18
    </endStateIndex>
    <page>
    1
@@ -1358,7 +1738,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         loader_done=0
+         loader_encode_en=0
             <status>
             LOCAL
             </status>
@@ -1400,10 +1780,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         10
+         25
          </x2Obj>
          <y2Obj>
-         -6
+         -7
          </y2Obj>
          <page>
          1
@@ -1411,40 +1791,40 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S2
+   S11
    </startState>
    <endState>
-   S2
+   S11
    </endState>
    <startPtX>
-   375.0
+   647.0
    </startPtX>
    <startPtY>
-   259.0
+   172.0
    </startPtY>
    <endPtX>
-   396.0
+   668.0
    </endPtX>
    <endPtY>
-   261.0
+   170.0
    </endPtY>
    <startCtrlPtX>
-   364.0
+   630.0
    </startCtrlPtX>
    <startCtrlPtY>
-   229.0
+   144.0
    </startCtrlPtY>
    <endCtrlPtY>
-   411.0
+   678.0
    </endCtrlPtY>
    <endCtrlPtY>
-   233.0
+   139.0
    </endCtrlPtY>
    <startStateIndex>
-   25
+   24
    </startStateIndex>
    <endStateIndex>
-   30
+   29
    </endStateIndex>
    <page>
    1
@@ -1462,7 +1842,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S3
+         S10
             <status>
             LOCAL
             </status>
@@ -1504,10 +1884,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         1
+         5
          </x2Obj>
          <y2Obj>
-         15
+         18
          </y2Obj>
          <page>
          1
@@ -1515,16 +1895,16 @@ fzm_globalTable
       </name>
    </attributes>
    <x0>
-   509
+   814
    </x0>
    <y0>
-   261
+   167
    </y0>
    <x1>
-   559
+   864
    </x1>
    <y1>
-   311
+   217
    </y1>
    <reset>
    false
@@ -1601,7 +1981,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         loader_done=1
+         loader_encode_en=1
             <status>
             LOCAL
             </status>
@@ -1643,10 +2023,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         -3
+         0
          </x2Obj>
          <y2Obj>
-         -8
+         -5
          </y2Obj>
          <page>
          1
@@ -1654,40 +2034,40 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S2
+   S11
    </startState>
    <endState>
-   S3
+   S10
    </endState>
    <startPtX>
-   408.0
+   684.0
    </startPtX>
    <startPtY>
-   278.0
+   189.0
    </startPtY>
    <endPtX>
-   510.0
+   814.0
    </endPtX>
    <endPtY>
-   277.0
+   192.0
    </endPtY>
    <startCtrlPtX>
-   431.0
+   709.0
    </startCtrlPtX>
    <startCtrlPtY>
-   278.0
+   189.0
    </startCtrlPtY>
    <endCtrlPtY>
-   486.0
+   787.0
    </endCtrlPtY>
    <endCtrlPtY>
-   277.0
+   192.0
    </endCtrlPtY>
    <startStateIndex>
    35
    </startStateIndex>
    <endStateIndex>
-   20
+   18
    </endStateIndex>
    <page>
    1
@@ -1724,89 +2104,6 @@ fzm_globalTable
    </stub>
 </transition>
 ## END STATE TRANSITION OBJECT
-## START STATE OBJECT
-<state>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         S4
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         14
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-   </attributes>
-   <x0>
-   657
-   </x0>
-   <y0>
-   262
-   </y0>
-   <x1>
-   707
-   </x1>
-   <y1>
-   312
-   </y1>
-   <reset>
-   false
-   </reset>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-</state>
-## END STATE OBJECT
 ## START STATE TRANSITION OBJECT
 <transition>
    <attributes>
@@ -1815,7 +2112,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         trans8
+         trans7
             <status>
             LOCAL
             </status>
@@ -1913,10 +2210,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         -16
+         -1
          </x2Obj>
          <y2Obj>
-         -265
+         324
          </y2Obj>
          <page>
          1
@@ -1924,817 +2221,40 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S3
+   S10
    </startState>
    <endState>
-   S4
+   S11
    </endState>
    <startPtX>
-   558.0
+   815.0
    </startPtX>
    <startPtY>
-   281.0
+   200.0
    </startPtY>
    <endPtX>
-   657.0
+   684.0
    </endPtX>
    <endPtY>
-   282.0
+   198.0
    </endPtY>
    <startCtrlPtX>
-   575.0
+   770.0
    </startCtrlPtX>
    <startCtrlPtY>
-   281.0
+   243.0
    </startCtrlPtY>
    <endCtrlPtY>
-   639.0
+   707.0
    </endCtrlPtY>
    <endCtrlPtY>
-   282.0
+   228.0
    </endCtrlPtY>
    <startStateIndex>
-   35
+   16
    </startStateIndex>
    <endStateIndex>
-   19
-   </endStateIndex>
-   <page>
    1
-   </page>
-   <color>
-   -16777216
-   </color>
-   <pageSX>
-   0.0
-   </pageSX>
-   <pageSY>
-   0.0
-   </pageSY>
-   <pageSCX>
-   0.0
-   </pageSCX>
-   <pageSCY>
-   0.0
-   </pageSCY>
-   <pageEX>
-   0.0
-   </pageEX>
-   <pageEY>
-   0.0
-   </pageEY>
-   <pageECX>
-   0.0
-   </pageECX>
-   <pageECY>
-   0.0
-   </pageECY>
-   <stub>
-   false
-   </stub>
-</transition>
-## END STATE TRANSITION OBJECT
-## START LOOPBACK TRANSITION OBJECT
-<transition>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         trans9
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-      <equation>
-            <status>
-            ABS
-            </status>
-         <value>
-         start=1
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         11
-         </x2Obj>
-         <y2Obj>
-         4
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </equation>
-   </attributes>
-   <startState>
-   S4
-   </startState>
-   <endState>
-   S4
-   </endState>
-   <startPtX>
-   669.0
-   </startPtX>
-   <startPtY>
-   265.0
-   </startPtY>
-   <endPtX>
-   690.0
-   </endPtX>
-   <endPtY>
-   263.0
-   </endPtY>
-   <startCtrlPtX>
-   652.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   237.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   700.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   232.0
-   </endCtrlPtY>
-   <startStateIndex>
-   24
-   </startStateIndex>
-   <endStateIndex>
-   29
-   </endStateIndex>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-</transition>
-## START LOOPBACK TRANSITION OBJECT
-## START STATE OBJECT
-<state>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         S5
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-   </attributes>
-   <x0>
-   508
-   </x0>
-   <y0>
-   364
-   </y0>
-   <x1>
-   558
-   </x1>
-   <y1>
-   414
-   </y1>
-   <reset>
-   false
-   </reset>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-</state>
-## END STATE OBJECT
-## START STATE TRANSITION OBJECT
-<transition>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         trans10
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-      <equation>
-            <status>
-            ABS
-            </status>
-         <value>
-         start=0
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         30
-         </x2Obj>
-         <y2Obj>
-         21
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </equation>
-   </attributes>
-   <startState>
-   S4
-   </startState>
-   <endState>
-   S5
-   </endState>
-   <startPtX>
-   665.0
-   </startPtX>
-   <startPtY>
-   306.0
-   </startPtY>
-   <endPtX>
-   554.0
-   </endPtX>
-   <endPtY>
-   376.0
-   </endPtY>
-   <startCtrlPtX>
-   649.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   326.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   590.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   374.0
-   </endCtrlPtY>
-   <startStateIndex>
-   13
-   </startStateIndex>
-   <endStateIndex>
-   33
-   </endStateIndex>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-   <pageSX>
-   0.0
-   </pageSX>
-   <pageSY>
-   0.0
-   </pageSY>
-   <pageSCX>
-   0.0
-   </pageSCX>
-   <pageSCY>
-   0.0
-   </pageSCY>
-   <pageEX>
-   0.0
-   </pageEX>
-   <pageEY>
-   0.0
-   </pageEY>
-   <pageECX>
-   0.0
-   </pageECX>
-   <pageECY>
-   0.0
-   </pageECY>
-   <stub>
-   false
-   </stub>
-</transition>
-## END STATE TRANSITION OBJECT
-## START LOOPBACK TRANSITION OBJECT
-<transition>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         trans11
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-      <equation>
-            <status>
-            ABS
-            </status>
-         <value>
-         start=0
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         6
-         </x2Obj>
-         <y2Obj>
-         2
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </equation>
-   </attributes>
-   <startState>
-   S5
-   </startState>
-   <endState>
-   S5
-   </endState>
-   <startPtX>
-   541.0
-   </startPtX>
-   <startPtY>
-   412.0
-   </startPtY>
-   <endPtX>
-   520.0
-   </endPtX>
-   <endPtY>
-   410.0
-   </endPtY>
-   <startCtrlPtX>
-   552.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   442.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   504.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   438.0
-   </endCtrlPtY>
-   <startStateIndex>
-   7
-   </startStateIndex>
-   <endStateIndex>
-   12
-   </endStateIndex>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-</transition>
-## START LOOPBACK TRANSITION OBJECT
-## START STATE TRANSITION OBJECT
-<transition>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         trans12
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-      <equation>
-            <status>
-            ABS
-            </status>
-         <value>
-         start=1
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         -13
-         </x2Obj>
-         <y2Obj>
-         29
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </equation>
-   </attributes>
-   <startState>
-   S5
-   </startState>
-   <endState>
-   S2
-   </endState>
-   <startPtX>
-   511.0
-   </startPtX>
-   <startPtY>
-   376.0
-   </startPtY>
-   <endPtX>
-   400.0
-   </endPtX>
-   <endPtY>
-   302.0
-   </endPtY>
-   <startCtrlPtX>
-   474.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   373.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   415.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   323.0
-   </endCtrlPtY>
-   <startStateIndex>
-   21
-   </startStateIndex>
-   <endStateIndex>
-   5
    </endStateIndex>
    <page>
    1
