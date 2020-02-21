@@ -67,8 +67,10 @@ type state_type is (reset, load_0, load_1, load_2, load_3, load_4, load_5, load_
 signal next_state, current_state : state_type;
 --signal next_data_from_loader : std_logic_vector(7 downto 0);
 signal update_latch : std_logic;
+signal clk_negated: std_logic;
 begin
-    latch_data: Register_D port map(in1=>data_ram_in,clk=>clk,rst=>rst,load=>update_latch,out1=>data_from_loader);
+    clk_negated <= not clk;
+    latch_data: Register_D port map(in1=>data_ram_in,clk=>clk_negated,rst=>rst,load=>update_latch,out1=>data_from_loader);
     process(clk, rst)
     begin
         if rst = '1' then

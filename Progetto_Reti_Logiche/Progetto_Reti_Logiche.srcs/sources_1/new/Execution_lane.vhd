@@ -37,7 +37,8 @@ entity Execution_lane is
      port(
         wz_vector,data_in : in std_logic_vector(7 downto 0);
         valid : out std_logic;
-        offset : out std_logic_vector(1 downto 0)
+        offset : out std_logic_vector(1 downto 0);
+         diff_external : out std_logic_vector(7 downto 0)
         );  
 end Execution_lane;
 
@@ -51,4 +52,5 @@ begin
 diff <= data_in+wz_vector+1;
 offset<=diff(1 downto 0);
 valid <= not( diff(7) or diff(6) or diff(5) or diff(4) or diff(3) or diff(2) );
+diff_external <= diff;
 end Dataflow;
