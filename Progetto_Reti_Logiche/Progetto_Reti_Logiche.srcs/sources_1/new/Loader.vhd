@@ -171,7 +171,7 @@ begin
                 update_latch <= '1';
             when S11 =>
                 loader_done <= '1';
-                driver_loader_en <= '0';
+                driver_loader_en <= '0'; 
                 reg_we <= '0';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "---";

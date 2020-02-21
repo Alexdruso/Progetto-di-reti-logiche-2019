@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 22.31.01 on 20/02/20
+## File last modified by Fizzim: 17:31:44 on 21/02/20
 <version>
    14.02.26
 </version>
@@ -359,7 +359,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S0
+         reset
             <status>
             LOCAL
             </status>
@@ -442,7 +442,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S1
+         load_wz
             <status>
             LOCAL
             </status>
@@ -634,10 +634,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S0
+   reset
    </startState>
    <endState>
-   S0
+   reset
    </endState>
    <startPtX>
    86.0
@@ -794,10 +794,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S0
+   reset
    </startState>
    <endState>
-   S1
+   load_wz
    </endState>
    <startPtX>
    132.0
@@ -981,10 +981,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S1
+   load_wz
    </startState>
    <endState>
-   S1
+   load_wz
    </endState>
    <startPtX>
    222.0
@@ -1032,7 +1032,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S2
+         lad_addr
             <status>
             LOCAL
             </status>
@@ -1224,10 +1224,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S1
+   load_wz
    </startState>
    <endState>
-   S2
+   lad_addr
    </endState>
    <startPtX>
    255.0
@@ -1411,10 +1411,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S2
+   lad_addr
    </startState>
    <endState>
-   S2
+   lad_addr
    </endState>
    <startPtX>
    375.0
@@ -1462,7 +1462,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S3
+         write_result
             <status>
             LOCAL
             </status>
@@ -1654,10 +1654,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S2
+   lad_addr
    </startState>
    <endState>
-   S3
+   write_result
    </endState>
    <startPtX>
    408.0
@@ -1732,7 +1732,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S4
+         done_up
             <status>
             LOCAL
             </status>
@@ -1924,10 +1924,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S3
+   write_result
    </startState>
    <endState>
-   S4
+   done_up
    </endState>
    <startPtX>
    558.0
@@ -2111,10 +2111,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S4
+   done_up
    </startState>
    <endState>
-   S4
+   done_up
    </endState>
    <startPtX>
    669.0
@@ -2162,7 +2162,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S5
+         wait_start
             <status>
             LOCAL
             </status>
@@ -2354,10 +2354,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S4
+   done_up
    </startState>
    <endState>
-   S5
+   wait_start
    </endState>
    <startPtX>
    665.0
@@ -2541,10 +2541,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S5
+   wait_start
    </startState>
    <endState>
-   S5
+   wait_start
    </endState>
    <startPtX>
    541.0
@@ -2701,10 +2701,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S5
+   wait_start
    </startState>
    <endState>
-   S2
+   lad_addr
    </endState>
    <startPtX>
    511.0

@@ -32,13 +32,13 @@ entity CU is
 end CU;
 
 architecture Behavioral of CU is
-type state_type is (S0, S1, S2, S3, S4, S5); --e se riducessimo gli stati a stop, start e done?
+type state_type is (reset, load_wz, load_addr, write_result, done_up, wait_start); --e se riducessimo gli stati a stop, start e done?
 signal next_state, current_state : state_type;
 begin
     process(clk, rst)
     begin
         if rst = '1' then
-            current_state <= S0;
+            current_state <= reset;
         elsif rising_edge(clk) then
             current_state <= next_state;
         end if;
@@ -47,32 +47,32 @@ begin
     lambda: process(current_state)
     begin
         case current_state is
-            when S0 =>
+            when reset =>
                 done <= '0';
                 loader_wz_en <= '0';
                 loader_encode_en <= '0';
                 writer_en <= '0';
-            when S1 =>
+            when load_wz =>
                 done <= '0';
                 loader_wz_en <= '1';
                 loader_encode_en <= '0';
                 writer_en <= '0';
-            when S2 =>
+            when load_addr =>
                 done <= '0';
                 loader_wz_en <= '0';
                 loader_encode_en <= '1';
                 writer_en <= '0';
-            when S3 =>
+            when write_result =>
                 done <= '0';
                 loader_wz_en <= '0';
                 loader_encode_en <= '0';
                 writer_en <= '1';
-            when S4 =>
+            when done_up =>
                 done <= '1';
                 loader_wz_en <= '0';
                 loader_encode_en <= '0';
                 writer_en <= '0';
-            when S5 =>
+            when wait_start =>
                 done <= '0';
                 loader_wz_en <= '0';
                 loader_encode_en <= '0';
@@ -88,37 +88,37 @@ begin
     delta: process(current_state, start, loader_done)
     begin
         case current_state is
-            when S0 =>
+            when reset =>
                 if start = '1' then
-                    next_state <= S1;
+                    next_state <= load_wz;
                 else
-                    next_state <= S0;
+                    next_state <= reset;
                 end if;
-            when S1 =>
+            when load_wz =>
                 if loader_done = '1' then
-                    next_state <= S2;
+                    next_state <= load_addr;
                 else
-                    next_state <= S1;
+                    next_state <= load_wz;
                 end if;
-            when S2 =>
+            when load_addr =>
                 if loader_done = '1' then
-                    next_state <= S3;
+                    next_state <= write_result;
                 else
-                    next_state <= S2;
+                    next_state <= load_addr;
                 end if;
-            when S3 =>
-                next_state <= S4;
-            when S4 =>
+            when write_result =>
+                next_state <= done_up;
+            when done_up =>
                 if start = '0' then
-                    next_state <= S5;
+                    next_state <= wait_start;
                 else
-                    next_state <= S4;
+                    next_state <= done_up;
                 end if;
-            when S5 =>
+            when wait_start =>
                 if start = '1' then
-                    next_state <= S2;
+                    next_state <= load_addr;
                 else
-                    next_state <= S5;
+                    next_state <= wait_start;
                 end if;
             when others =>
                 next_state <= current_state;
