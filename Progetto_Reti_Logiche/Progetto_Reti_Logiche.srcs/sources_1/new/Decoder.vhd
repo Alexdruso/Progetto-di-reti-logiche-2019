@@ -44,12 +44,13 @@ entity Decoder is
     );
 end Decoder;
 
-architecture Dataflow of Decoder is
+architecture Behavioral of Decoder is
     begin
     
-    out1 <= (
-        conv_integer(addr) => '1',
-        others => '0'
-    );   
+    process(addr)
+    begin
+    out1<=(others=>'0');
+    out1(conv_integer(addr))<='1'; 
+    end process;  
 
-end Dataflow;
+end Behavioral;
