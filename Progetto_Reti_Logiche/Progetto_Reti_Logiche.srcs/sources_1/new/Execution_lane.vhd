@@ -25,7 +25,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -49,7 +49,7 @@ signal diff : std_logic_vector(7 downto 0);
 
 begin
 
-diff <= data_in+wz_vector+1;
+diff <= std_logic_vector(SIGNED(data_in)+SIGNED(wz_vector)+1);
 offset<=diff(1 downto 0);
 valid <= not( diff(7) or diff(6) or diff(5) or diff(4) or diff(3) or diff(2) );
 diff_external <= diff;

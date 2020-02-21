@@ -138,6 +138,8 @@ signal data_ram_from_writer: std_logic_vector(7 downto 0);
 signal addr_ram_from_writer: std_logic_vector(3 downto 0);
 signal driver_writer_en: std_logic;
 
+signal data_to_memory_negated: std_logic_vector(7 downto 0);
+
 begin
     cu_instance: CU port map(
         clk=>i_clk, 
@@ -164,9 +166,11 @@ begin
         data_from_loader=>data_from_loader
     );
     
+    data_to_memory_negated <= not data_from_loader;
+    
     memory_instance: Memory port map(
         addr_reg=>addr_reg,
-        data_in=>data_from_loader,
+        data_in=>data_to_memory_negated,
         clk=>i_clk, 
         rst=>i_rst, 
         we=>reg_we,
