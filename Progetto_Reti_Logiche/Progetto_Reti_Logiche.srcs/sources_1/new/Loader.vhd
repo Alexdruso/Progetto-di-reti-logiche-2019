@@ -63,7 +63,7 @@ end component;
 
 
 signal addr : std_logic_vector(3 downto 0);
-type state_type is (S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11);
+type state_type is (reset, load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_wz_done, load_addr, wait_encode);
 signal next_state, current_state : state_type;
 --signal next_data_from_loader : std_logic_vector(7 downto 0);
 signal update_latch : std_logic;
@@ -72,7 +72,7 @@ begin
     process(clk, rst)
     begin
         if rst = '1' then
-            current_state <= S0;
+            current_state <= reset;
         elsif rising_edge(clk) then
             current_state <= next_state;
         end if;
@@ -81,7 +81,7 @@ begin
     lambda: process(current_state, data_ram_in)
     begin
         case current_state is
-            when S0 =>
+            when reset =>
                 loader_done <= '0';
                 driver_loader_en <= '0';
                 reg_we <= '-';
@@ -89,7 +89,7 @@ begin
                 addr_reg <= "---";
                 --next_data_from_loader <= "--------";
                 update_latch <= '-';
-            when S1 =>
+            when load_0 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '-';
@@ -97,7 +97,7 @@ begin
                 addr_reg <= "---";
                 --next_data_from_loader <= "--------";
                 update_latch <= '-';
-            when S2 =>
+            when load_1 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '1';
@@ -105,7 +105,7 @@ begin
                 addr_reg <= "000";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S3 =>
+            when load_2 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '1';
@@ -113,7 +113,7 @@ begin
                 addr_reg <= "001";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S4 =>
+            when load_3 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '1';
@@ -121,7 +121,7 @@ begin
                 addr_reg <= "010";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S5 =>
+            when load_4 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '1';
@@ -129,7 +129,7 @@ begin
                 addr_reg <= "011";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S6 =>
+            when load_5 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '1';
@@ -137,7 +137,7 @@ begin
                 addr_reg <= "100";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S7 =>
+            when load_6 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '1';
@@ -145,7 +145,7 @@ begin
                 addr_reg <= "101";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S8 =>
+            when load_7 =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '1';
@@ -153,7 +153,7 @@ begin
                 addr_reg <= "110";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S9 =>
+            when load_wz_done =>
                 loader_done <= '1';
                 driver_loader_en <= '0';
                 reg_we <= '1';
@@ -161,7 +161,7 @@ begin
                 addr_reg <= "111";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S10 =>
+            when load_addr =>
                 loader_done <= '0';
                 driver_loader_en <= '1';
                 reg_we <= '0';
@@ -169,7 +169,7 @@ begin
                 addr_reg <= "---";
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
-            when S11 =>
+            when wait_encode =>
                 loader_done <= '1';
                 driver_loader_en <= '0'; 
                 reg_we <= '0';
@@ -191,38 +191,38 @@ begin
     delta: process(current_state, loader_wz_en, loader_encode_en)
     begin
         case current_state is
-            when S0 =>
+            when reset =>
                 if loader_wz_en = '1' then
-                    next_state <= S1;
+                    next_state <= load_0;
                 else
-                    next_state <= S0;
+                    next_state <= reset;
                 end if;
-            when S1 =>
-                next_state <= S2;
-            when S2 =>
-                next_state <= S3;
-            when S3 =>
-                next_state <= S4;
-            when S4 =>
-                next_state <= S5;
-            when S5 =>
-                next_state <= S6;
-            when S6 =>
-                next_state <= S7;
-            when S7 =>
-                next_state <= S8;
-            when S8 =>
-                next_state <= S9;
-            when S9 =>
-                next_state <= S11;
-            when S11 =>
+            when load_0 =>
+                next_state <= load_1;
+            when load_1 =>
+                next_state <= load_2;
+            when load_2 =>
+                next_state <= load_3;
+            when load_3 =>
+                next_state <= load_4;
+            when load_4 =>
+                next_state <= load_5;
+            when load_5 =>
+                next_state <= load_6;
+            when load_6 =>
+                next_state <= load_7;
+            when load_7 =>
+                next_state <= load_wz_done;
+            when load_wz_done =>
+                next_state <= wait_encode;
+            when wait_encode =>
                 if loader_encode_en = '1' then
-                    next_state <= S10;
+                    next_state <= load_addr;
                 else
-                    next_state <= S11;
+                    next_state <= wait_encode;
                 end if;
-            when S10 =>
-                next_state <= S11;
+            when load_addr =>
+                next_state <= wait_encode;
             when others =>
                 next_state <= current_state;
         end case;

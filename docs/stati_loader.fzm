@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 22.30.06 on 20/02/20
+## File last modified by Fizzim: 17:46:06 on 21/02/20
 <version>
    14.02.26
 </version>
@@ -602,7 +602,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S1
+         load_0
             <status>
             LOCAL
             </status>
@@ -797,7 +797,7 @@ fzm_globalTable
    S0
    </startState>
    <endState>
-   S1
+   load_0
    </endState>
    <startPtX>
    99.0
@@ -872,7 +872,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S2..S8
+         load_1.load_7
             <status>
             LOCAL
             </status>
@@ -1064,10 +1064,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S1
+   load_0
    </startState>
    <endState>
-   S2..S8
+   load_1.load_7
    </endState>
    <startPtX>
    249.0
@@ -1142,7 +1142,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S9
+         load_wz_done
             <status>
             LOCAL
             </status>
@@ -1334,10 +1334,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S2..S8
+   load_1.load_7
    </startState>
    <endState>
-   S9
+   load_wz_done
    </endState>
    <startPtX>
    407.0
@@ -1412,7 +1412,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S11
+         wait_encode
             <status>
             LOCAL
             </status>
@@ -1604,10 +1604,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S9
+   load_wz_done
    </startState>
    <endState>
-   S11
+   wait_encode
    </endState>
    <startPtX>
    556.0
@@ -1791,10 +1791,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S11
+   wait_encode
    </startState>
    <endState>
-   S11
+   wait_encode
    </endState>
    <startPtX>
    647.0
@@ -1842,7 +1842,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         S10
+         load_addr
             <status>
             LOCAL
             </status>
@@ -2034,10 +2034,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S11
+   wait_encode
    </startState>
    <endState>
-   S10
+   load_addr
    </endState>
    <startPtX>
    684.0
@@ -2221,10 +2221,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   S10
+   load_addr
    </startState>
    <endState>
-   S11
+   wait_encode
    </endState>
    <startPtX>
    815.0
