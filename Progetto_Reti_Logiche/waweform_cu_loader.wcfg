@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="project_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="project_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1280001fs"></ZoomEndTime>
+      <Cursor1Time time="2150000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="43" />
+   <wvobject fp_name="/project_tb/tb_done" type="logic">
+      <obj_property name="ElementShortName">tb_done</obj_property>
+      <obj_property name="ObjectShortName">tb_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/mem_address" type="array">
+      <obj_property name="ElementShortName">mem_address[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_address[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/tb_rst" type="logic">
+      <obj_property name="ElementShortName">tb_rst</obj_property>
+      <obj_property name="ObjectShortName">tb_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/tb_start" type="logic">
+      <obj_property name="ElementShortName">tb_start</obj_property>
+      <obj_property name="ObjectShortName">tb_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/tb_clk" type="logic">
+      <obj_property name="ElementShortName">tb_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/mem_o_data" type="array">
+      <obj_property name="ElementShortName">mem_o_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_o_data[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/mem_i_data" type="array">
+      <obj_property name="ElementShortName">mem_i_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_i_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/enable_wire" type="logic">
+      <obj_property name="ElementShortName">enable_wire</obj_property>
+      <obj_property name="ObjectShortName">enable_wire</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/mem_we" type="logic">
+      <obj_property name="ElementShortName">mem_we</obj_property>
+      <obj_property name="ObjectShortName">mem_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/c_CLOCK_PERIOD" type="other">
+      <obj_property name="ElementShortName">c_CLOCK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">c_CLOCK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/cu_instance/next_state" type="other">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/cu_instance/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/cu_instance/loader_done" type="logic">
+      <obj_property name="ElementShortName">loader_done</obj_property>
+      <obj_property name="ObjectShortName">loader_done</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/cu_instance/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/cu_instance/loader_wz_en" type="logic">
+      <obj_property name="ElementShortName">loader_wz_en</obj_property>
+      <obj_property name="ObjectShortName">loader_wz_en</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/cu_instance/loader_encode_en" type="logic">
+      <obj_property name="ElementShortName">loader_encode_en</obj_property>
+      <obj_property name="ObjectShortName">loader_encode_en</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/cu_instance/writer_en" type="logic">
+      <obj_property name="ElementShortName">writer_en</obj_property>
+      <obj_property name="ObjectShortName">writer_en</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/next_state" type="other">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/loader_wz_en" type="logic">
+      <obj_property name="ElementShortName">loader_wz_en</obj_property>
+      <obj_property name="ObjectShortName">loader_wz_en</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/loader_encode_en" type="logic">
+      <obj_property name="ElementShortName">loader_encode_en</obj_property>
+      <obj_property name="ObjectShortName">loader_encode_en</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/data_ram_in" type="array">
+      <obj_property name="ElementShortName">data_ram_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_ram_in[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/loader_done" type="logic">
+      <obj_property name="ElementShortName">loader_done</obj_property>
+      <obj_property name="ObjectShortName">loader_done</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/driver_loader_en" type="logic">
+      <obj_property name="ElementShortName">driver_loader_en</obj_property>
+      <obj_property name="ObjectShortName">driver_loader_en</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/reg_we" type="logic">
+      <obj_property name="ElementShortName">reg_we</obj_property>
+      <obj_property name="ObjectShortName">reg_we</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/addr_ram_from_loader" type="array">
+      <obj_property name="ElementShortName">addr_ram_from_loader[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_ram_from_loader[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/addr_reg" type="array">
+      <obj_property name="ElementShortName">addr_reg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_reg[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/data_from_loader" type="array">
+      <obj_property name="ElementShortName">data_from_loader[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_from_loader[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/addr" type="array">
+      <obj_property name="ElementShortName">addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/loader_instance/update_latch" type="logic">
+      <obj_property name="ElementShortName">update_latch</obj_property>
+      <obj_property name="ObjectShortName">update_latch</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/addr_reg" type="array">
+      <obj_property name="ElementShortName">addr_reg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_reg[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data0" type="array">
+      <obj_property name="ElementShortName">data0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data0[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data1" type="array">
+      <obj_property name="ElementShortName">data1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data1[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data2" type="array">
+      <obj_property name="ElementShortName">data2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data2[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data3" type="array">
+      <obj_property name="ElementShortName">data3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data3[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data4" type="array">
+      <obj_property name="ElementShortName">data4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data4[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data5" type="array">
+      <obj_property name="ElementShortName">data5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data5[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data6" type="array">
+      <obj_property name="ElementShortName">data6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data6[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/data7" type="array">
+      <obj_property name="ElementShortName">data7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data7[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/sel" type="array">
+      <obj_property name="ElementShortName">sel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/project_tb/UUT/memory_instance/sel_enabled" type="array">
+      <obj_property name="ElementShortName">sel_enabled[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_enabled[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>
