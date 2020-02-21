@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 17:46:06 on 21/02/20
+## File last modified by Fizzim: 18:40:35 on 21/02/20
 <version>
    14.02.26
 </version>
@@ -299,10 +299,10 @@
 </tabs>
 ## START PREFERENCES
 <SCounter>
-6
+7
 </SCounter>
 <TCounter>
-8
+9
 </TCounter>
 <TableVis>
 true
@@ -2224,37 +2224,307 @@ fzm_globalTable
    load_addr
    </startState>
    <endState>
+   load_addr_done
+   </endState>
+   <startPtX>
+   826.0
+   </startPtX>
+   <startPtY>
+   213.0
+   </startPtY>
+   <endPtX>
+   751.0
+   </endPtX>
+   <endPtY>
+   300.0
+   </endPtY>
+   <startCtrlPtX>
+   821.0
+   </startCtrlPtX>
+   <startCtrlPtY>
+   241.0
+   </startCtrlPtY>
+   <endCtrlPtY>
+   774.0
+   </endCtrlPtY>
+   <endCtrlPtY>
+   290.0
+   </endCtrlPtY>
+   <startStateIndex>
+   12
+   </startStateIndex>
+   <endStateIndex>
+   32
+   </endStateIndex>
+   <page>
+   1
+   </page>
+   <color>
+   -16777216
+   </color>
+   <pageSX>
+   0.0
+   </pageSX>
+   <pageSY>
+   0.0
+   </pageSY>
+   <pageSCX>
+   0.0
+   </pageSCX>
+   <pageSCY>
+   0.0
+   </pageSCY>
+   <pageEX>
+   0.0
+   </pageEX>
+   <pageEY>
+   0.0
+   </pageEY>
+   <pageECX>
+   0.0
+   </pageECX>
+   <pageECY>
+   0.0
+   </pageECY>
+   <stub>
+   false
+   </stub>
+</transition>
+## END STATE TRANSITION OBJECT
+## START STATE OBJECT
+<state>
+   <attributes>
+      <name>
+            <status>
+            ABS
+            </status>
+         <value>
+         load_addr_done
+            <status>
+            LOCAL
+            </status>
+         </value>
+         <vis>
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         0
+         </x2Obj>
+         <y2Obj>
+         0
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </name>
+   </attributes>
+   <x0>
+   707
+   </x0>
+   <y0>
+   292
+   </y0>
+   <x1>
+   757
+   </x1>
+   <y1>
+   342
+   </y1>
+   <reset>
+   false
+   </reset>
+   <page>
+   1
+   </page>
+   <color>
+   -16777216
+   </color>
+</state>
+## END STATE OBJECT
+## START STATE TRANSITION OBJECT
+<transition>
+   <attributes>
+      <name>
+            <status>
+            ABS
+            </status>
+         <value>
+         def_name
+            <status>
+            GLOBAL_VAR
+            </status>
+         </value>
+         <vis>
+         0
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         0
+         </x2Obj>
+         <y2Obj>
+         0
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </name>
+      <equation>
+            <status>
+            ABS
+            </status>
+         <value>
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </value>
+         <vis>
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         -273
+         </x2Obj>
+         <y2Obj>
+         307
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </equation>
+   </attributes>
+   <startState>
+   load_addr_done
+   </startState>
+   <endState>
    wait_encode
    </endState>
    <startPtX>
-   815.0
+   712.0
    </startPtX>
    <startPtY>
-   200.0
+   300.0
    </startPtY>
    <endPtX>
-   684.0
+   672.0
    </endPtX>
    <endPtY>
-   198.0
+   215.0
    </endPtY>
    <startCtrlPtX>
-   770.0
+   700.0
    </startCtrlPtX>
    <startCtrlPtY>
-   243.0
+   286.0
    </startCtrlPtY>
    <endCtrlPtY>
-   707.0
+   672.0
    </endCtrlPtY>
    <endCtrlPtY>
-   228.0
+   242.0
    </endCtrlPtY>
    <startStateIndex>
-   16
+   22
    </startStateIndex>
    <endStateIndex>
-   1
+   6
    </endStateIndex>
    <page>
    1

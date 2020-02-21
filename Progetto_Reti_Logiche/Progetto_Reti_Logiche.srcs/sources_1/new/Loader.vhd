@@ -63,7 +63,7 @@ end component;
 
 
 signal addr : std_logic_vector(3 downto 0);
-type state_type is (reset, load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_wz_done, load_addr, wait_encode);
+type state_type is (reset, load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_wz_done, load_addr, wait_encode, load_addr_done);
 signal next_state, current_state : state_type;
 --signal next_data_from_loader : std_logic_vector(7 downto 0);
 signal update_latch : std_logic;
@@ -170,13 +170,21 @@ begin
                 --next_data_from_loader <= data_ram_in;
                 update_latch <= '1';
             when wait_encode =>
-                loader_done <= '1';
+                loader_done <= '0';
                 driver_loader_en <= '0'; 
                 reg_we <= '0';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "---";
                 --next_data_from_loader <= next_data_from_loader;
                 update_latch <= '0';
+            when load_addr_done =>
+                loader_done <= '1';
+                driver_loader_en <= '0';
+                reg_we <= '0';
+                addr_ram_from_loader <= "----";
+                addr_reg <= "---";
+                --next_data_from_loader <= next_data_from_loader;
+                update_latch <= '1';
             when others =>
                 loader_done <= '-';
                 driver_loader_en <= '-';
@@ -222,6 +230,8 @@ begin
                     next_state <= wait_encode;
                 end if;
             when load_addr =>
+                next_state <= load_addr_done;
+            when load_addr_done =>
                 next_state <= wait_encode;
             when others =>
                 next_state <= current_state;
