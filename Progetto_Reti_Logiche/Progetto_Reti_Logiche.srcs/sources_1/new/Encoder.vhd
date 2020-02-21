@@ -89,7 +89,7 @@ valid_offset<= os0 when v0='1' else
                os7 when v7='1' else
                "--";
            
-D: Decoder
+decoder_instance: Decoder
     generic map(N=>2)
     port map(addr=>valid_offset, out1=>one_hot_offset);           
                

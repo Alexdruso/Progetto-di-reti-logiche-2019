@@ -73,7 +73,7 @@ signal sel, sel_enabled : std_logic_vector(7 downto 0);
 
 begin
 
-    D: Decoder
+    decoder_instance: Decoder
         generic map(N=>3) 
         port map(
             addr=>addr_reg,
