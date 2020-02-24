@@ -3,3 +3,4 @@ Progetto_Reti_Logiche.runs
 Progetto_Reti_Logiche.ip_user_files
 Progetto_Reti_Logiche.sim
 fizzim_errors.log
+tb_generator/out/*.vhd

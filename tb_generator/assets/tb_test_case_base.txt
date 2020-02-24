@@ -1,0 +1,17 @@
+wait for c_CLOCK_PERIOD;
+mem_i_data_from_tb <= std_logic_vector(to_unsigned( {test_case_in_int} , 8));
+enable_wire_from_tb <= '1';
+wait for c_CLOCK_PERIOD;
+enable_wire_from_tb <= '0';
+
+tb_start <= '1';
+wait for c_CLOCK_PERIOD;
+wait until tb_done = '1';
+wait for c_CLOCK_PERIOD;
+tb_start <= '0';
+wait until tb_done = '0';
+
+-- Maschera di output = {test_case_out_bin_text}
+assert RAM(9) = std_logic_vector(to_unsigned( {test_case_out_int} , 8)) report "***** TEST {test_case_number} FALLITO! ***** Expected {test_case_out_int} found " & integer'image(to_integer(unsigned(RAM(9))))  severity failure;
+
+report "TEST {test_case_number} PASSATO.";
