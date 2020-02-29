@@ -1,0 +1,7 @@
+wait for c_CLOCK_PERIOD;
+tb_rst <= '1';
+
+{ram_setup_body}
+
+wait for c_CLOCK_PERIOD;
+tb_rst <= '0';
