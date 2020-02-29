@@ -44,8 +44,7 @@ component Execution_lane is
      port(
         wz_vector, data_in: in std_logic_vector(6 downto 0);
         valid: out std_logic;
-        offset: out std_logic_vector(1 downto 0);
-        diff_external : out std_logic_vector(7 downto 0)
+        offset: out std_logic_vector(1 downto 0)
     );  
         
 end component;
@@ -70,14 +69,14 @@ signal diff0,diff1,diff2,diff3,diff4,diff5,diff6,diff7: std_logic_vector(7 downt
 
 begin
 
-EL0: Execution_lane port map(wz_vector=>wz0,data_in=>to_be_coded,valid=>v0,offset=>os0,diff_external=>diff0);
-EL1: Execution_lane port map(wz_vector=>wz1,data_in=>to_be_coded,valid=>v1,offset=>os1,diff_external=>diff1);
-EL2: Execution_lane port map(wz_vector=>wz2,data_in=>to_be_coded,valid=>v2,offset=>os2,diff_external=>diff2);
-EL3: Execution_lane port map(wz_vector=>wz3,data_in=>to_be_coded,valid=>v3,offset=>os3,diff_external=>diff3);
-EL4: Execution_lane port map(wz_vector=>wz4,data_in=>to_be_coded,valid=>v4,offset=>os4,diff_external=>diff4);
-EL5: Execution_lane port map(wz_vector=>wz5,data_in=>to_be_coded,valid=>v5,offset=>os5,diff_external=>diff5);
-EL6: Execution_lane port map(wz_vector=>wz6,data_in=>to_be_coded,valid=>v6,offset=>os6,diff_external=>diff6);
-EL7: Execution_lane port map(wz_vector=>wz7,data_in=>to_be_coded,valid=>v7,offset=>os7,diff_external=>diff7);
+EL0: Execution_lane port map(wz_vector=>wz0,data_in=>to_be_coded,valid=>v0,offset=>os0);
+EL1: Execution_lane port map(wz_vector=>wz1,data_in=>to_be_coded,valid=>v1,offset=>os1);
+EL2: Execution_lane port map(wz_vector=>wz2,data_in=>to_be_coded,valid=>v2,offset=>os2);
+EL3: Execution_lane port map(wz_vector=>wz3,data_in=>to_be_coded,valid=>v3,offset=>os3);
+EL4: Execution_lane port map(wz_vector=>wz4,data_in=>to_be_coded,valid=>v4,offset=>os4);
+EL5: Execution_lane port map(wz_vector=>wz5,data_in=>to_be_coded,valid=>v5,offset=>os5);
+EL6: Execution_lane port map(wz_vector=>wz6,data_in=>to_be_coded,valid=>v6,offset=>os6);
+EL7: Execution_lane port map(wz_vector=>wz7,data_in=>to_be_coded,valid=>v7,offset=>os7);
 
 valid<=v0 or v1 or v2 or v3 or v4 or v5 or v6 or v7;
 
