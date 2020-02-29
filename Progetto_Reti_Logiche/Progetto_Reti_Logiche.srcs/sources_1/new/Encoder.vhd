@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Encoder is
     port(
-        wz0, wz1, wz2, wz3, wz4, wz5, wz6, wz7, to_be_coded: std_logic_vector(7 downto 0);
+        wz0, wz1, wz2, wz3, wz4, wz5, wz6, wz7, to_be_coded: std_logic_vector(6 downto 0);
         coded_result: out std_logic_vector(7 downto 0)
     );
 end Encoder;
@@ -42,7 +42,7 @@ architecture Dataflow of Encoder is
 
 component Execution_lane is
      port(
-        wz_vector, data_in: in std_logic_vector(7 downto 0);
+        wz_vector, data_in: in std_logic_vector(6 downto 0);
         valid: out std_logic;
         offset: out std_logic_vector(1 downto 0);
         diff_external : out std_logic_vector(7 downto 0)
@@ -107,7 +107,7 @@ wz_num<= "000" when v0='1' else
 
 coded_input<='1'&wz_num&one_hot_offset;     
      
-coded_result<= to_be_coded when valid='0' else
+coded_result<= '0'&to_be_coded when valid='0' else
                coded_input;     
               
 end Dataflow;

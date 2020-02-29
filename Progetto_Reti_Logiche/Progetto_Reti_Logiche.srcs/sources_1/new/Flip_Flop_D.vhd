@@ -32,9 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Register_D is
-    port( in1 : in std_logic_vector(7 downto 0);
+    port( in1 : in std_logic_vector(6 downto 0);
          clk, rst, load : in std_logic; 
-         out1 : out std_logic_vector(7 downto 0) 
+         out1 : out std_logic_vector(6 downto 0) 
          );
          
 end Register_D;
