@@ -66,11 +66,14 @@ signal addr : std_logic_vector(3 downto 0);
 type state_type is (reset, load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_wz_done, load_addr, wait_encode, load_addr_done);
 signal next_state, current_state : state_type;
 --signal next_data_from_loader : std_logic_vector(7 downto 0);
-signal update_latch : std_logic;
+signal update_buffer : std_logic;
 signal clk_negated: std_logic;
 begin
     clk_negated <= not clk;
-    latch_data: Register_D port map(in1=>data_ram_in,clk=>clk_negated,rst=>rst,load=>update_latch,out1=>data_from_loader);
+    
+    driver_loader_en <= loader_wz_en or loader_encode_en;
+    
+    data_buffer: Register_D port map(in1=>data_ram_in,clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
     process(clk, rst)
     begin
         if rst = '1' then
@@ -85,116 +88,116 @@ begin
         case current_state is
             when reset =>
                 loader_done <= '0';
-                driver_loader_en <= '0';
+                --driver_loader_en <= '0';
                 reg_we <= '-';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "---";
                 --next_data_from_loader <= "--------";
-                update_latch <= '-';
+                update_buffer <= '-';
             when load_0 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '-';
                 addr_ram_from_loader <= "0000";
                 addr_reg <= "---";
                 --next_data_from_loader <= "--------";
-                update_latch <= '-';
+                update_buffer <= '-';
             when load_1 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '1';
                 addr_ram_from_loader <= "0001";
                 addr_reg <= "000";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_2 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '1';
                 addr_ram_from_loader <= "0010";
                 addr_reg <= "001";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_3 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '1';
                 addr_ram_from_loader <= "0011";
                 addr_reg <= "010";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_4 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '1';
                 addr_ram_from_loader <= "0100";
                 addr_reg <= "011";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_5 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '1';
                 addr_ram_from_loader <= "0101";
                 addr_reg <= "100";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_6 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '1';
                 addr_ram_from_loader <= "0110";
                 addr_reg <= "101";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_7 =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '1';
                 addr_ram_from_loader <= "0111";
                 addr_reg <= "110";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_wz_done =>
                 loader_done <= '1';
-                driver_loader_en <= '0';
+                --driver_loader_en <= '0';
                 reg_we <= '1';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "111";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when load_addr =>
                 loader_done <= '0';
-                driver_loader_en <= '1';
+                --driver_loader_en <= '1';
                 reg_we <= '0';
                 addr_ram_from_loader <= "1000";
                 addr_reg <= "---";
                 --next_data_from_loader <= data_ram_in;
-                update_latch <= '1';
+                update_buffer <= '1';
             when wait_encode =>
                 loader_done <= '0';
-                driver_loader_en <= '0'; 
+                --driver_loader_en <= '0'; 
                 reg_we <= '0';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "---";
                 --next_data_from_loader <= next_data_from_loader;
-                update_latch <= '0';
+                update_buffer <= '0';
             when load_addr_done =>
                 loader_done <= '1';
-                driver_loader_en <= '0';
+                --driver_loader_en <= '0';
                 reg_we <= '0';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "---";
                 --next_data_from_loader <= next_data_from_loader;
-                update_latch <= '1';
+                update_buffer <= '1';
             when others =>
                 loader_done <= '-';
-                driver_loader_en <= '-';
+                --driver_loader_en <= '-';
                 reg_we <= '-';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "---";
                 --next_data_from_loader <= next_data_from_loader;
-                update_latch <= '0';
+                update_buffer <= '0';
         end case;
     end process;
 
@@ -202,13 +205,17 @@ begin
     begin
         case current_state is
             when reset =>
-                if loader_wz_en = '1' then
+                --if loader_wz_en = '1' then
                     next_state <= load_0;
-                else
-                    next_state <= reset;
-                end if;
+                --else
+                    --next_state <= reset;
+                --end if;
             when load_0 =>
-                next_state <= load_1;
+                if loader_wz_en = '1' then
+                    next_state <= load_1;
+                else
+                    next_state <= load_0;
+                end if;
             when load_1 =>
                 next_state <= load_2;
             when load_2 =>
@@ -226,13 +233,17 @@ begin
             when load_wz_done =>
                 next_state <= wait_encode;
             when wait_encode =>
-                if loader_encode_en = '1' then
+                --if loader_encode_en = '1' then
                     next_state <= load_addr;
-                else
-                    next_state <= wait_encode;
-                end if;
+                --else
+                    --next_state <= wait_encode;
+                --end if;
             when load_addr =>
-                next_state <= load_addr_done;
+                if loader_encode_en = '1' then
+                    next_state <= load_addr_done;
+                else
+                    next_state <= load_addr;
+                end if;
             when load_addr_done =>
                 next_state <= wait_encode;
             when others =>
