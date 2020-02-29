@@ -9,7 +9,6 @@ from random import randint
 test_benches = { 
   "main_tb": [
     ("weird", [99, 124, 107, 120, 8, 126, 40, 20], [111]),
-    ("sum_must_be_8_bits", [125, 55, 31, 37, 45, 77, 91, 100], [0]),
     ("first_wz_first_addr", [0, 4, 55, 31, 37, 45, 77, 91], [0]),
     ("first_wz_last_addr", [0, 4, 55, 31, 37, 45, 77, 91], [3]),
     ("last_wz_first_addr", [0, 4, 55, 31, 37, 45, 77, 91], [91]),
@@ -22,7 +21,7 @@ test_benches = {
     ("blurred_borders", [0, 4, 8, 12, 16, 20, 24, 28], [3, 4, 7, 8, 11, 12, 15, 16, 19, 20, 23, 24, 27, 28]),
     ("same_encoding", [0, 124, 72, 44, 55, 66, 77, 88], [0, 0])
   ],
-  "random_tb": [(f"random_{i}", [randint(0, 127) for _ in range(8)], [randint(0, 127) for _ in range(randint(1, 50))]) for i in range(50)]
+  "random_tb": [(f"random_{i}", [randint(0, 127) for _ in range(8)], [randint(0, 127) for _ in range(randint(1, 50))]) for i in range(10)]
 }
 
 
