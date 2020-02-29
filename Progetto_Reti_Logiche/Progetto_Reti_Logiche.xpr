@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/aless/Desktop/Progetto-di-reti-logiche-2019/Progetto_Reti_Logiche/Progetto_Reti_Logiche.xpr">
+<Project Version="7" Minor="44" Path="D:/Desktop/Progetto-di-reti-logiche-2019/Progetto_Reti_Logiche/Progetto_Reti_Logiche.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="b03d9e268fc042aeb74bdb3ca596f0c6"/>
@@ -31,7 +31,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="59"/>
+    <Option Name="WTXSimLaunchSim" Val="110"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -110,13 +110,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/ram_driver.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/Loader_counter.vhd">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -225,6 +218,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_4" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_4">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_4/new/multiple_resets.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>

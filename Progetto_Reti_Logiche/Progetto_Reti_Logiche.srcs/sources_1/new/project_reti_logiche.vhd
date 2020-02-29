@@ -65,29 +65,29 @@ component Loader
 		loader_done, driver_loader_en, reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
 		addr_reg: out std_logic_vector(2 downto 0);
-		data_from_loader: out std_logic_vector(7 downto 0)
+		data_from_loader: out std_logic_vector(6 downto 0)
     );
 end component;
 
 component Memory
     port(
         addr_reg: in std_logic_vector(2 downto 0);  
-        data_in: in std_logic_vector(7 downto 0);
+        data_in: in std_logic_vector(6 downto 0);
         clk, rst, we: in std_logic;
-        data0: out std_logic_vector(7 downto 0);
-        data1: out std_logic_vector(7 downto 0);
-        data2: out std_logic_vector(7 downto 0);
-        data3: out std_logic_vector(7 downto 0);
-        data4: out std_logic_vector(7 downto 0);
-        data5: out std_logic_vector(7 downto 0);
-        data6: out std_logic_vector(7 downto 0);
-        data7: out std_logic_vector(7 downto 0)
+        data0: out std_logic_vector(6 downto 0);
+        data1: out std_logic_vector(6 downto 0);
+        data2: out std_logic_vector(6 downto 0);
+        data3: out std_logic_vector(6 downto 0);
+        data4: out std_logic_vector(6 downto 0);
+        data5: out std_logic_vector(6 downto 0);
+        data6: out std_logic_vector(6 downto 0);
+        data7: out std_logic_vector(6 downto 0)
     );
 end component;
 
 component Encoder
     port(
-        wz0, wz1, wz2, wz3, wz4, wz5, wz6, wz7, to_be_coded: std_logic_vector(7 downto 0);
+        wz0, wz1, wz2, wz3, wz4, wz5, wz6, wz7, to_be_coded: std_logic_vector(6 downto 0);
         coded_result: out std_logic_vector(7 downto 0)
     );
 end component;
@@ -124,21 +124,19 @@ signal driver_loader_en: std_logic;
 signal reg_we: std_logic;
 signal addr_ram_from_loader: std_logic_vector(3 downto 0);
 signal addr_reg:  std_logic_vector(2 downto 0);
-signal data_from_loader: std_logic_vector(7 downto 0);
-signal data0: std_logic_vector(7 downto 0);
-signal data1: std_logic_vector(7 downto 0);
-signal data2: std_logic_vector(7 downto 0);
-signal data3: std_logic_vector(7 downto 0);
-signal data4: std_logic_vector(7 downto 0);
-signal data5: std_logic_vector(7 downto 0);
-signal data6: std_logic_vector(7 downto 0);
-signal data7: std_logic_vector(7 downto 0);
+signal data_from_loader: std_logic_vector(6 downto 0);
+signal data0: std_logic_vector(6 downto 0);
+signal data1: std_logic_vector(6 downto 0);
+signal data2: std_logic_vector(6 downto 0);
+signal data3: std_logic_vector(6 downto 0);
+signal data4: std_logic_vector(6 downto 0);
+signal data5: std_logic_vector(6 downto 0);
+signal data6: std_logic_vector(6 downto 0);
+signal data7: std_logic_vector(6 downto 0);
 signal coded_result: std_logic_vector(7 downto 0);
 signal data_ram_from_writer: std_logic_vector(7 downto 0);
 signal addr_ram_from_writer: std_logic_vector(3 downto 0);
 signal driver_writer_en: std_logic;
-
-signal data_to_memory_negated: std_logic_vector(7 downto 0);
 
 begin
     cu_instance: CU port map(
@@ -166,11 +164,9 @@ begin
         data_from_loader=>data_from_loader
     );
     
-    data_to_memory_negated <= not data_from_loader;
-    
     memory_instance: Memory port map(
         addr_reg=>addr_reg,
-        data_in=>data_to_memory_negated,
+        data_in=>data_from_loader,
         clk=>i_clk, 
         rst=>i_rst, 
         we=>reg_we,

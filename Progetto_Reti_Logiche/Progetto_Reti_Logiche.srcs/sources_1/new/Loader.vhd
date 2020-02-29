@@ -39,7 +39,7 @@ entity Loader is
 		loader_done,driver_loader_en,reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
 		addr_reg: out std_logic_vector(2 downto 0);
-		data_from_loader: out std_logic_vector(7 downto 0)
+		data_from_loader: out std_logic_vector(6 downto 0)
 		);
 end Loader;
 
@@ -55,9 +55,9 @@ architecture Dataflow of Loader is
 
 component Register_D
     port(
-        in1 : in std_logic_vector(7 downto 0);
+        in1 : in std_logic_vector(6 downto 0);
         clk, rst, load : in std_logic; 
-        out1 : out std_logic_vector(7 downto 0)
+        out1 : out std_logic_vector(6 downto 0)
         );
 end component;        
 
@@ -73,7 +73,7 @@ begin
     
     driver_loader_en <= loader_wz_en or loader_encode_en;
     
-    data_buffer: Register_D port map(in1=>data_ram_in,clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
+    data_buffer: Register_D port map(in1=>data_ram_in(6 downto 0),clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
     process(clk, rst)
     begin
         if rst = '1' then
