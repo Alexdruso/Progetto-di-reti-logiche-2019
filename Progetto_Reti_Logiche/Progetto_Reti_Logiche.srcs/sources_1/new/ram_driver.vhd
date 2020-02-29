@@ -49,14 +49,14 @@ architecture Dataflow of Ram_driver is
 signal padded_addr_ram_from_loader : STD_LOGIC_VECTOR (15 downto 0);
 signal padded_addr_ram_from_writer : STD_LOGIC_VECTOR (15 downto 0);
 begin
-    en_ram <= driver_loader_en or driver_writer_en;
+    en_ram <= driver_loader_en xor driver_writer_en;
     we_ram <= driver_writer_en;
     data_ram_out <= data_ram_from_writer when driver_writer_en='1' else
-                    "--------";
+                    (others =>'-');
     padded_addr_ram_from_loader <= ("000000000000"&addr_ram_from_loader);
     padded_addr_ram_from_writer <= ("000000000000"&addr_ram_from_writer);
     addr_ram <= padded_addr_ram_from_loader  when driver_loader_en='1' and driver_writer_en='0' else
                 padded_addr_ram_from_writer  when driver_loader_en='0' and driver_writer_en='1' else
-                "----------------";
+                (others =>'-');
 
 end Dataflow;
