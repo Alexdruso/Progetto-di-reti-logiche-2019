@@ -52,15 +52,14 @@ component CU
     Port (
         clk, start, rst, loader_done: in STD_LOGIC;
         done: out STD_LOGIC;
-        loader_wz_en: out STD_LOGIC;
-        loader_encode_en: out STD_LOGIC;
+        load_en: out STD_LOGIC;
         writer_en: out STD_LOGIC
     );
 end component;
 
 component Loader
     port(
-        clk, rst, loader_wz_en, loader_encode_en: in std_logic;
+        clk, rst, load_en: in std_logic;
 		data_ram_in: in std_logic_vector(7 downto 0);
 		loader_done, driver_loader_en, reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
@@ -117,8 +116,7 @@ component Ram_driver
 end component;
 
 signal loader_done: std_logic;
-signal loader_wz_en: std_logic;
-signal loader_encode_en: std_logic;
+signal load_en: std_logic;
 signal writer_en: std_logic;
 signal driver_loader_en: std_logic;
 signal reg_we: std_logic;
@@ -145,16 +143,14 @@ begin
         rst=>i_rst, 
         loader_done=>loader_done, 
         done=>o_done, 
-        loader_wz_en=>loader_wz_en,
-        loader_encode_en=>loader_encode_en,
+        load_en=>load_en,
         writer_en=>writer_en
     );
     
     loader_instance: Loader port map(
         clk=>i_clk, 
         rst=>i_rst, 
-        loader_wz_en=>loader_wz_en,
-        loader_encode_en=>loader_encode_en,
+        load_en=>load_en,
         data_ram_in=>i_data,
         loader_done=>loader_done,
         driver_loader_en=>driver_loader_en,

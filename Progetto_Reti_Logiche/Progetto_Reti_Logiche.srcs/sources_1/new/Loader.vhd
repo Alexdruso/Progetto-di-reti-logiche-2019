@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Loader is
         
     port(
-        clk,rst,loader_wz_en,loader_encode_en: in std_logic;
+        clk,rst,load_en: in std_logic;
 		data_ram_in: in std_logic_vector(7 downto 0);
 		loader_done,driver_loader_en,reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
@@ -71,7 +71,7 @@ signal clk_negated: std_logic;
 begin
     clk_negated <= not clk;
     
-    driver_loader_en <= loader_wz_en or loader_encode_en;
+    driver_loader_en <= load_en;
     
     data_buffer: Register_D port map(in1=>data_ram_in(6 downto 0),clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
     process(clk, rst)
@@ -159,7 +159,7 @@ begin
                 --next_data_from_loader <= data_ram_in;
                 update_buffer <= '1';
             when load_wz_done =>
-                loader_done <= '1';
+                loader_done <= '0';
                 --driver_loader_en <= '0';
                 reg_we <= '1';
                 addr_ram_from_loader <= "----";
@@ -201,7 +201,7 @@ begin
         end case;
     end process;
 
-    delta: process(current_state, loader_wz_en, loader_encode_en)
+    delta: process(current_state, load_en)
     begin
         case current_state is
             when reset =>
@@ -211,7 +211,7 @@ begin
                     --next_state <= reset;
                 --end if;
             when load_0 =>
-                if loader_wz_en = '1' then
+                if load_en = '1' then
                     next_state <= load_1;
                 else
                     next_state <= load_0;
@@ -239,11 +239,7 @@ begin
                     --next_state <= wait_encode;
                 --end if;
             when load_addr =>
-                if loader_encode_en = '1' then
                     next_state <= load_addr_done;
-                else
-                    next_state <= load_addr;
-                end if;
             when load_addr_done =>
                 next_state <= wait_encode;
             when others =>

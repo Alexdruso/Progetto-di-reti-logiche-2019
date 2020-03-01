@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 19:19:25 on 29/02/20
+## File last modified by Fizzim: 12:05:17 on 01/03/20
 <version>
    14.02.26
 </version>
@@ -359,7 +359,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         stop
+         wait_start
             <status>
             LOCAL
             </status>
@@ -800,10 +800,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   stop
+   wait_start
    </startState>
    <endState>
-   stop
+   wait_start
    </endState>
    <startPtX>
    76.0
@@ -960,10 +960,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   stop
+   wait_start
    </startState>
    <endState>
-   stop
+   wait_start
    </endState>
    <startPtX>
    87.0
@@ -1120,7 +1120,7 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   stop
+   wait_start
    </startState>
    <endState>
    load
@@ -1844,7 +1844,7 @@ fzm_globalTable
    done_up
    </startState>
    <endState>
-   stop
+   wait_start
    </endState>
    <startPtX>
    475.0
