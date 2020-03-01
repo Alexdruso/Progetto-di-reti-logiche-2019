@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 12:05:17 on 01/03/20
+## File last modified by Fizzim: 22.16.37 on 01/03/20
 <version>
    14.02.26
 </version>
@@ -401,10 +401,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         0
+         -1
          </x2Obj>
          <y2Obj>
-         0
+         31
          </y2Obj>
          <page>
          1
@@ -415,13 +415,13 @@ fzm_globalTable
    75
    </x0>
    <y0>
-   204
+   201
    </y0>
    <x1>
-   125
+   175
    </x1>
    <y1>
-   254
+   301
    </y1>
    <reset>
    false
@@ -484,10 +484,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         0
+         2
          </x2Obj>
          <y2Obj>
-         0
+         27
          </y2Obj>
          <page>
          1
@@ -495,16 +495,16 @@ fzm_globalTable
       </name>
    </attributes>
    <x0>
-   210
+   250
    </x0>
    <y0>
-   205
+   201
    </y0>
    <x1>
-   260
+   350
    </x1>
    <y1>
-   255
+   301
    </y1>
    <reset>
    false
@@ -525,7 +525,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         write_resul
+         write_result
             <status>
             LOCAL
             </status>
@@ -570,7 +570,7 @@ fzm_globalTable
          0
          </x2Obj>
          <y2Obj>
-         0
+         25
          </y2Obj>
          <page>
          1
@@ -578,16 +578,16 @@ fzm_globalTable
       </name>
    </attributes>
    <x0>
-   351
+   446
    </x0>
    <y0>
-   209
+   201
    </y0>
    <x1>
-   401
+   546
    </x1>
    <y1>
-   259
+   301
    </y1>
    <reset>
    false
@@ -650,10 +650,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         0
+         2
          </x2Obj>
          <y2Obj>
-         0
+         28
          </y2Obj>
          <page>
          1
@@ -661,16 +661,16 @@ fzm_globalTable
       </name>
    </attributes>
    <x0>
-   475
+   640
    </x0>
    <y0>
-   208
+   201
    </y0>
    <x1>
-   525
+   740
    </x1>
    <y1>
-   258
+   301
    </y1>
    <reset>
    false
@@ -683,166 +683,6 @@ fzm_globalTable
    </color>
 </state>
 ## END STATE OBJECT
-## START LOOPBACK TRANSITION OBJECT
-<transition>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         reset
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-      <equation>
-            <status>
-            ABS
-            </status>
-         <value>
-         rst=1
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </equation>
-   </attributes>
-   <startState>
-   wait_start
-   </startState>
-   <endState>
-   wait_start
-   </endState>
-   <startPtX>
-   76.0
-   </startPtX>
-   <startPtY>
-   237.0
-   </startPtY>
-   <endPtX>
-   78.0
-   </endPtX>
-   <endPtY>
-   216.0
-   </endPtY>
-   <startCtrlPtX>
-   46.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   248.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   51.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   200.0
-   </endCtrlPtY>
-   <startStateIndex>
-   16
-   </startStateIndex>
-   <endStateIndex>
-   21
-   </endStateIndex>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-</transition>
-## START LOOPBACK TRANSITION OBJECT
 ## START LOOPBACK TRANSITION OBJECT
 <transition>
    <attributes>
@@ -949,10 +789,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         0
+         6
          </x2Obj>
          <y2Obj>
-         0
+         -1
          </y2Obj>
          <page>
          1
@@ -966,34 +806,34 @@ fzm_globalTable
    wait_start
    </endState>
    <startPtX>
-   87.0
+   107.0
    </startPtX>
    <startPtY>
-   207.0
+   204.0
    </startPtY>
    <endPtX>
-   108.0
+   150.0
    </endPtX>
    <endPtY>
-   205.0
+   207.0
    </endPtY>
    <startCtrlPtX>
-   71.0
+   97.0
    </startCtrlPtX>
    <startCtrlPtY>
-   178.0
+   172.0
    </startCtrlPtY>
    <endCtrlPtY>
-   117.0
+   150.0
    </endCtrlPtY>
    <endCtrlPtY>
-   174.0
+   166.0
    </endCtrlPtY>
    <startStateIndex>
-   24
+   25
    </startStateIndex>
    <endStateIndex>
-   29
+   30
    </endStateIndex>
    <page>
    1
@@ -1109,10 +949,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         0
+         1
          </x2Obj>
          <y2Obj>
-         0
+         -11
          </y2Obj>
          <page>
          1
@@ -1126,34 +966,34 @@ fzm_globalTable
    load
    </endState>
    <startPtX>
-   124.0
+   175.0
    </startPtX>
    <startPtY>
-   224.0
+   251.0
    </startPtY>
    <endPtX>
-   210.0
+   250.0
    </endPtX>
    <endPtY>
-   225.0
+   251.0
    </endPtY>
    <startCtrlPtX>
-   148.0
+   199.0
    </startCtrlPtX>
    <startCtrlPtY>
-   224.0
+   251.0
    </startCtrlPtY>
    <endCtrlPtY>
-   185.0
+   224.0
    </endCtrlPtY>
    <endCtrlPtY>
-   225.0
+   250.0
    </endCtrlPtY>
    <startStateIndex>
-   35
+   0
    </startStateIndex>
    <endStateIndex>
-   19
+   18
    </endStateIndex>
    <page>
    1
@@ -1254,7 +1094,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         loaded=0
+         loader_done=0
             <status>
             LOCAL
             </status>
@@ -1313,34 +1153,34 @@ fzm_globalTable
    load
    </endState>
    <startPtX>
-   222.0
+   282.0
    </startPtX>
    <startPtY>
-   208.0
+   204.0
    </startPtY>
    <endPtX>
-   243.0
+   325.0
    </endPtX>
    <endPtY>
-   206.0
+   207.0
    </endPtY>
    <startCtrlPtX>
-   207.0
+   272.0
    </startCtrlPtX>
    <startCtrlPtY>
-   179.0
+   172.0
    </startCtrlPtY>
    <endCtrlPtY>
-   253.0
+   330.0
    </endCtrlPtY>
    <endCtrlPtY>
-   175.0
+   158.0
    </endCtrlPtY>
    <startStateIndex>
-   24
+   25
    </startStateIndex>
    <endStateIndex>
-   29
+   30
    </endStateIndex>
    <page>
    1
@@ -1414,7 +1254,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         loaded=1
+         loader_done=1
             <status>
             LOCAL
             </status>
@@ -1459,7 +1299,7 @@ fzm_globalTable
          0
          </x2Obj>
          <y2Obj>
-         0
+         -10
          </y2Obj>
          <page>
          1
@@ -1470,37 +1310,37 @@ fzm_globalTable
    load
    </startState>
    <endState>
-   write_resul
+   write_result
    </endState>
    <startPtX>
-   259.0
+   350.0
    </startPtX>
    <startPtY>
-   225.0
+   251.0
    </startPtY>
    <endPtX>
-   352.0
+   446.0
    </endPtX>
    <endPtY>
-   225.0
+   251.0
    </endPtY>
    <startCtrlPtX>
-   286.0
+   382.0
    </startCtrlPtX>
    <startCtrlPtY>
-   225.0
+   251.0
    </startCtrlPtY>
    <endCtrlPtY>
-   325.0
+   417.0
    </endCtrlPtY>
    <endCtrlPtY>
-   225.0
+   252.0
    </endCtrlPtY>
    <startStateIndex>
-   35
+   0
    </startStateIndex>
    <endStateIndex>
-   20
+   18
    </endStateIndex>
    <page>
    1
@@ -1551,9 +1391,9 @@ fzm_globalTable
             </status>
          </value>
          <vis>
-         1
+         0
             <status>
-            LOCAL
+            GLOBAL_VAR
             </status>
          </vis>
          <type>
@@ -1654,40 +1494,40 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   write_resul
+   write_result
    </startState>
    <endState>
    done_up
    </endState>
    <startPtX>
-   400.0
+   546.0
    </startPtX>
    <startPtY>
-   229.0
+   251.0
    </startPtY>
    <endPtX>
-   475.0
+   640.0
    </endPtX>
    <endPtY>
-   228.0
+   251.0
    </endPtY>
    <startCtrlPtX>
-   421.0
+   597.0
    </startCtrlPtX>
    <startCtrlPtY>
-   229.0
+   250.0
    </startCtrlPtY>
    <endCtrlPtY>
-   453.0
+   583.0
    </endCtrlPtY>
    <endCtrlPtY>
-   228.0
+   251.0
    </endCtrlPtY>
    <startStateIndex>
-   35
+   0
    </startStateIndex>
    <endStateIndex>
-   19
+   18
    </endStateIndex>
    <page>
    1
@@ -1830,10 +1670,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         -19
+         246
          </x2Obj>
          <y2Obj>
-         115
+         37
          </y2Obj>
          <page>
          1
@@ -1847,34 +1687,34 @@ fzm_globalTable
    wait_start
    </endState>
    <startPtX>
-   475.0
+   657.0
    </startPtX>
    <startPtY>
-   233.0
+   289.0
    </startPtY>
    <endPtX>
-   124.0
+   133.0
    </endPtX>
    <endPtY>
-   233.0
+   300.0
    </endPtY>
    <startCtrlPtX>
-   370.0
+   535.0
    </startCtrlPtX>
    <startCtrlPtY>
-   352.0
+   370.0
    </startCtrlPtY>
    <endCtrlPtY>
-   191.0
+   241.0
    </endCtrlPtY>
    <endCtrlPtY>
-   358.0
+   384.0
    </endCtrlPtY>
    <startStateIndex>
-   18
+   13
    </startStateIndex>
    <endStateIndex>
-   1
+   8
    </endStateIndex>
    <page>
    1
@@ -2017,10 +1857,10 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         0
+         3
          </x2Obj>
          <y2Obj>
-         0
+         -1
          </y2Obj>
          <page>
          1
@@ -2034,34 +1874,34 @@ fzm_globalTable
    done_up
    </endState>
    <startPtX>
-   523.0
+   672.0
    </startPtX>
    <startPtY>
-   224.0
+   204.0
    </startPtY>
    <endPtX>
-   521.0
+   715.0
    </endPtX>
    <endPtY>
-   245.0
+   207.0
    </endPtY>
    <startCtrlPtX>
-   552.0
+   658.0
    </startCtrlPtX>
    <startCtrlPtY>
-   212.0
+   175.0
    </startCtrlPtY>
    <endCtrlPtY>
-   548.0
+   717.0
    </endCtrlPtY>
    <endCtrlPtY>
-   260.0
+   159.0
    </endCtrlPtY>
    <startStateIndex>
-   34
+   25
    </startStateIndex>
    <endStateIndex>
-   3
+   30
    </endStateIndex>
    <page>
    1
