@@ -63,7 +63,7 @@ end component;
 
 
 signal addr : std_logic_vector(3 downto 0);
-type state_type is (reset, load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_wz_done, load_addr, wait_encode, load_addr_done);
+type state_type is (load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_first_addr, load_addr_done, load_addr );
 signal next_state, current_state : state_type;
 --signal next_data_from_loader : std_logic_vector(7 downto 0);
 signal update_buffer : std_logic;
@@ -77,7 +77,7 @@ begin
     process(clk, rst)
     begin
         if rst = '1' then
-            current_state <= reset;
+            current_state <= load_0;
         elsif rising_edge(clk) then
             current_state <= next_state;
         end if;
@@ -86,14 +86,6 @@ begin
     lambda: process(current_state, data_ram_in)
     begin
         case current_state is
-            when reset =>
-                loader_done <= '0';
-                --driver_loader_en <= '0';
-                reg_we <= '-';
-                addr_ram_from_loader <= "----";
-                addr_reg <= "---";
-                --next_data_from_loader <= "--------";
-                update_buffer <= '-';
             when load_0 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
@@ -158,38 +150,28 @@ begin
                 addr_reg <= "110";
                 --next_data_from_loader <= data_ram_in;
                 update_buffer <= '1';
-            when load_wz_done =>
+            when load_first_addr =>
                 loader_done <= '0';
                 --driver_loader_en <= '0';
                 reg_we <= '1';
-                addr_ram_from_loader <= "----";
+                addr_ram_from_loader <= "1000";
                 addr_reg <= "111";
                 --next_data_from_loader <= data_ram_in;
                 update_buffer <= '1';
-            when load_addr =>
-                loader_done <= '0';
-                --driver_loader_en <= '1';
-                reg_we <= '0';
-                addr_ram_from_loader <= "1000";
-                addr_reg <= "---";
-                --next_data_from_loader <= data_ram_in;
-                update_buffer <= '1';
-            when wait_encode =>
-                loader_done <= '0';
-                --driver_loader_en <= '0'; 
-                reg_we <= '0';
-                addr_ram_from_loader <= "----";
-                addr_reg <= "---";
-                --next_data_from_loader <= next_data_from_loader;
-                update_buffer <= '0';
             when load_addr_done =>
                 loader_done <= '1';
                 --driver_loader_en <= '0';
                 reg_we <= '0';
-                addr_ram_from_loader <= "----";
+                addr_ram_from_loader <= "1000";
                 addr_reg <= "---";
                 --next_data_from_loader <= next_data_from_loader;
                 update_buffer <= '1';
+            when load_addr =>
+                loader_done <= '0';
+                reg_we <= '0';
+                addr_ram_from_loader <= "1000";
+                addr_reg <= "---";
+                update_buffer <='1'; --giusto così?        
             when others =>
                 loader_done <= '-';
                 --driver_loader_en <= '-';
@@ -204,12 +186,6 @@ begin
     delta: process(current_state, load_en)
     begin
         case current_state is
-            when reset =>
-                --if loader_wz_en = '1' then
-                    next_state <= load_0;
-                --else
-                    --next_state <= reset;
-                --end if;
             when load_0 =>
                 if load_en = '1' then
                     next_state <= load_1;
@@ -229,19 +205,17 @@ begin
             when load_6 =>
                 next_state <= load_7;
             when load_7 =>
-                next_state <= load_wz_done;
-            when load_wz_done =>
-                next_state <= wait_encode;
-            when wait_encode =>
-                --if loader_encode_en = '1' then
-                    next_state <= load_addr;
-                --else
-                    --next_state <= wait_encode;
-                --end if;
-            when load_addr =>
-                    next_state <= load_addr_done;
+                next_state <= load_first_addr;
+            when load_first_addr =>
+                next_state <= load_addr_done;
             when load_addr_done =>
-                next_state <= wait_encode;
+                next_state <= load_addr;
+            when load_addr =>
+                if load_en = '0' then
+                    next_state <= load_addr;
+                elsif load_en = '1' then
+                    next_state <=load_addr_done;
+                end if;
             when others =>
                 next_state <= current_state;
         end case;
