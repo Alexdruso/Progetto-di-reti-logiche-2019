@@ -53,7 +53,7 @@ component CU
         clk, start, rst, loader_done: in STD_LOGIC;
         done: out STD_LOGIC;
         load_en: out STD_LOGIC;
-        writer_en: out STD_LOGIC
+        write_en: out STD_LOGIC
     );
 end component;
 
@@ -61,7 +61,7 @@ component Loader
     port(
         clk, rst, load_en: in std_logic;
 		data_ram_in: in std_logic_vector(7 downto 0);
-		loader_done, driver_loader_en, reg_we: out std_logic;
+		loader_done, reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
 		addr_reg: out std_logic_vector(2 downto 0);
 		data_from_loader: out std_logic_vector(6 downto 0)
@@ -91,23 +91,12 @@ component Encoder
     );
 end component;
 
-component Writer
-    port(
-        data_in: in std_logic_vector(7 downto 0); 
-        write_control: in std_logic; 
-        data_to_write: out std_logic_vector(7 downto 0); 
-        address_to_write: out std_logic_vector(3 downto 0); 
-        write_enable: out std_logic 
-        );
-end component;
-
 component Ram_driver
-    port(
+    port (
         addr_ram_from_loader: in STD_LOGIC_VECTOR (3 downto 0);
-        addr_ram_from_writer: in STD_LOGIC_VECTOR (3 downto 0);
-        data_ram_from_writer: in STD_LOGIC_VECTOR (7 downto 0);
-        driver_loader_en: in STD_LOGIC;
-        driver_writer_en: in STD_LOGIC;
+        data_ram_from_encoder: in STD_LOGIC_VECTOR (7 downto 0);
+        driver_load_en: in STD_LOGIC;
+        driver_write_en: in STD_LOGIC;
         addr_ram: out STD_LOGIC_VECTOR (15 downto 0);
         data_ram_out: out STD_LOGIC_VECTOR (7 downto 0);
         en_ram: out STD_LOGIC;
@@ -117,8 +106,7 @@ end component;
 
 signal loader_done: std_logic;
 signal load_en: std_logic;
-signal writer_en: std_logic;
-signal driver_loader_en: std_logic;
+signal write_en: std_logic;
 signal reg_we: std_logic;
 signal addr_ram_from_loader: std_logic_vector(3 downto 0);
 signal addr_reg:  std_logic_vector(2 downto 0);
@@ -132,9 +120,6 @@ signal data5: std_logic_vector(6 downto 0);
 signal data6: std_logic_vector(6 downto 0);
 signal data7: std_logic_vector(6 downto 0);
 signal coded_result: std_logic_vector(7 downto 0);
-signal data_ram_from_writer: std_logic_vector(7 downto 0);
-signal addr_ram_from_writer: std_logic_vector(3 downto 0);
-signal driver_writer_en: std_logic;
 
 begin
     cu_instance: CU port map(
@@ -144,7 +129,7 @@ begin
         loader_done=>loader_done, 
         done=>o_done, 
         load_en=>load_en,
-        writer_en=>writer_en
+        write_en=>write_en
     );
     
     loader_instance: Loader port map(
@@ -153,7 +138,6 @@ begin
         load_en=>load_en,
         data_ram_in=>i_data,
         loader_done=>loader_done,
-        driver_loader_en=>driver_loader_en,
         reg_we=>reg_we,
         addr_ram_from_loader=>addr_ram_from_loader,
         addr_reg=>addr_reg,
@@ -189,20 +173,11 @@ begin
         coded_result=>coded_result
     );
     
-    writer_instance: Writer port map(
-        data_in=>coded_result,
-        write_control=>writer_en,
-        data_to_write=>data_ram_from_writer,
-        address_to_write=>addr_ram_from_writer,
-        write_enable=>driver_writer_en
-    );
-    
     ram_driver_instance: Ram_driver port map(
         addr_ram_from_loader=>addr_ram_from_loader,
-        addr_ram_from_writer=>addr_ram_from_writer,
-        data_ram_from_writer=>data_ram_from_writer,
-        driver_loader_en=>driver_loader_en,
-        driver_writer_en=>driver_writer_en,
+        data_ram_from_encoder=>coded_result,
+        driver_load_en=>load_en,
+        driver_write_en=>write_en,
         addr_ram=>o_address,
         data_ram_out=>o_data,
         en_ram=>o_en,

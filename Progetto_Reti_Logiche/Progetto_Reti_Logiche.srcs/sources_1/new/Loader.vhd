@@ -36,7 +36,7 @@ entity Loader is
     port(
         clk,rst,load_en: in std_logic;
 		data_ram_in: in std_logic_vector(7 downto 0);
-		loader_done,driver_loader_en,reg_we: out std_logic;
+		loader_done, reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
 		addr_reg: out std_logic_vector(2 downto 0);
 		data_from_loader: out std_logic_vector(6 downto 0)
@@ -70,8 +70,6 @@ signal update_buffer : std_logic;
 signal clk_negated: std_logic;
 begin
     clk_negated <= not clk;
-    
-    driver_loader_en <= load_en;
     
     data_buffer: Register_D port map(in1=>data_ram_in(6 downto 0),clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
     process(clk, rst)

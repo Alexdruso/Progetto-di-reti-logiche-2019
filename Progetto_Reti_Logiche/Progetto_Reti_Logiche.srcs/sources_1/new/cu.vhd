@@ -27,7 +27,7 @@ entity CU is
     Port ( clk,start,rst,loader_done : in STD_LOGIC;
            done : out STD_LOGIC;
            load_en: out STD_LOGIC;
-           writer_en : out STD_LOGIC);
+           write_en : out STD_LOGIC);
 end CU;
 
 architecture Behavioral of CU is
@@ -49,23 +49,23 @@ begin
             when wait_start =>
                 done <= '0';
                 load_en <= '0';
-                writer_en <= '0';
+                write_en <= '0';
             when load =>
                 done <= '0';
                 load_en <= '1';
-                writer_en <= '0';
+                write_en <= '0';
             when write_result =>
                 done <= '0';
                 load_en <= '0';
-                writer_en <= '1';
+                write_en <= '1';
             when done_up =>
                 done <= '1';
                 load_en <= '0';
-                writer_en <= '0';
+                write_en <= '0';
             when others =>
                 done <= '-';
                 load_en <= '-';
-                writer_en <= '-';
+                write_en <= '-';
         end case;
     end process;
 

@@ -34,10 +34,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Ram_driver is
     Port (
         addr_ram_from_loader: in STD_LOGIC_VECTOR (3 downto 0);
-        addr_ram_from_writer: in STD_LOGIC_VECTOR (3 downto 0);
-        data_ram_from_writer: in STD_LOGIC_VECTOR (7 downto 0);
-        driver_loader_en: in STD_LOGIC;
-        driver_writer_en: in STD_LOGIC;
+        data_ram_from_encoder: in STD_LOGIC_VECTOR (7 downto 0);
+        driver_load_en: in STD_LOGIC;
+        driver_write_en: in STD_LOGIC;
         addr_ram: out STD_LOGIC_VECTOR (15 downto 0);
         data_ram_out: out STD_LOGIC_VECTOR (7 downto 0);
         en_ram: out STD_LOGIC;
@@ -46,17 +45,16 @@ entity Ram_driver is
 end Ram_driver;
 
 architecture Dataflow of Ram_driver is
+constant write_addr : STD_LOGIC_VECTOR (15 downto 0) := "0000000000001001";
 signal padded_addr_ram_from_loader : STD_LOGIC_VECTOR (15 downto 0);
-signal padded_addr_ram_from_writer : STD_LOGIC_VECTOR (15 downto 0);
 begin
-    en_ram <= driver_loader_en xor driver_writer_en;
-    we_ram <= driver_writer_en;
-    data_ram_out <= data_ram_from_writer when driver_writer_en='1' else
+    en_ram <= driver_load_en xor driver_write_en;
+    we_ram <= driver_write_en;
+    data_ram_out <= data_ram_from_encoder when driver_write_en='1' else
                     (others =>'-');
     padded_addr_ram_from_loader <= ("000000000000"&addr_ram_from_loader);
-    padded_addr_ram_from_writer <= ("000000000000"&addr_ram_from_writer);
-    addr_ram <= padded_addr_ram_from_loader  when driver_loader_en='1' and driver_writer_en='0' else
-                padded_addr_ram_from_writer  when driver_loader_en='0' and driver_writer_en='1' else
+    addr_ram <= padded_addr_ram_from_loader  when driver_load_en='1' and driver_write_en='0' else
+                write_addr  when driver_load_en='0' and driver_write_en='1' else
                 (others =>'-');
 
 end Dataflow;
