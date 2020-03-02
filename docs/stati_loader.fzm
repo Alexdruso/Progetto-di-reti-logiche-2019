@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 22.09.53 on 01/03/20
+## File last modified by Fizzim: 16:38:16 on 02/03/20
 <version>
    14.02.26
 </version>
@@ -878,7 +878,7 @@ fzm_globalTable
             ABS
             </status>
          <value>
-         load_addr
+         prepare_next_load
             <status>
             LOCAL
             </status>
@@ -1070,10 +1070,10 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   load_addr
+   prepare_next_load
    </startState>
    <endState>
-   load_addr
+   prepare_next_load
    </endState>
    <startPtX>
    862.0
@@ -1230,7 +1230,7 @@ fzm_globalTable
       </equation>
    </attributes>
    <startState>
-   load_addr
+   prepare_next_load
    </startState>
    <endState>
    load_addr_done
@@ -1954,7 +1954,7 @@ fzm_globalTable
    load_addr_done
    </startState>
    <endState>
-   load_addr
+   prepare_next_load
    </endState>
    <startPtX>
    683.0

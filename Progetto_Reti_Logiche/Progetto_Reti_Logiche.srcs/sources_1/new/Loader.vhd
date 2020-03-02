@@ -63,7 +63,7 @@ end component;
 
 
 signal addr : std_logic_vector(3 downto 0);
-type state_type is (load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_first_addr, load_addr_done, load_addr );
+type state_type is (load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_first_addr, load_addr_done, prepare_next_load );
 signal next_state, current_state : state_type;
 --signal next_data_from_loader : std_logic_vector(7 downto 0);
 signal update_buffer : std_logic;
@@ -164,7 +164,7 @@ begin
                 addr_reg <= "---";
                 --next_data_from_loader <= next_data_from_loader;
                 update_buffer <= '1';
-            when load_addr =>
+            when prepare_next_load =>
                 loader_done <= '0';
                 reg_we <= '0';
                 addr_ram_from_loader <= "1000";
@@ -207,10 +207,10 @@ begin
             when load_first_addr =>
                 next_state <= load_addr_done;
             when load_addr_done =>
-                next_state <= load_addr;
-            when load_addr =>
+                next_state <= prepare_next_load;
+            when prepare_next_load =>
                 if load_en = '0' then
-                    next_state <= load_addr;
+                    next_state <= prepare_next_load;
                 elsif load_en = '1' then
                     next_state <=load_addr_done;
                 end if;
