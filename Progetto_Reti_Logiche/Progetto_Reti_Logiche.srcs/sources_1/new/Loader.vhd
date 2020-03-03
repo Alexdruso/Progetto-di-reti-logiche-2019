@@ -53,13 +53,13 @@ architecture Dataflow of Loader is
 --        );
 --end component;
 
-component Register_D
-    port(
-        in1 : in std_logic_vector(6 downto 0);
-        clk, rst, load : in std_logic; 
-        out1 : out std_logic_vector(6 downto 0)
-        );
-end component;        
+--component Register_D
+  --  port(
+    --    in1 : in std_logic_vector(6 downto 0);
+      --  clk, rst, load : in std_logic; 
+     --   out1 : out std_logic_vector(6 downto 0)
+--        );
+--end component;        
 
 
 signal addr : std_logic_vector(3 downto 0);
@@ -67,11 +67,12 @@ type state_type is (load_0, load_1, load_2, load_3, load_4, load_5, load_6, load
 signal next_state, current_state : state_type;
 --signal next_data_from_loader : std_logic_vector(7 downto 0);
 signal update_buffer : std_logic;
-signal clk_negated: std_logic;
+--signal clk_negated: std_logic;
 begin
-    clk_negated <= not clk;
+    --clk_negated <= not clk;
     
-    data_buffer: Register_D port map(in1=>data_ram_in(6 downto 0),clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
+    --data_buffer: Register_D port map(in1=>data_ram_in(6 downto 0),clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
+    data_from_loader <= data_ram_in(6 downto 0);
     process(clk, rst)
     begin
         if rst = '1' then
