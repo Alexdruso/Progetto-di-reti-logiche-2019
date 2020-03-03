@@ -1,0 +1,18 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Architettura}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Control Unit \(CU\)}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{RAM driver}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Loader}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Memory}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.5}{Encoder}{chapter.2}% 7
+\BOOKMARK [0][-]{chapter.3}{Risultati sperimentali}{}% 8
+\BOOKMARK [0][-]{chapter.4}{Test benches}{}% 9
+\BOOKMARK [1][-]{section.4.1}{Primo indirizzo di ogni working zone}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.2}{Offset della prima working zone}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.3}{Indirizzo non appartenente a nessuna working zone}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.4}{Esecuzioni successive senza cambio di working zones}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.5}{Esecuzioni successive con cambio di working zones}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.6}{Indirizzi vicini ai margini delle working zones}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.7}{Indirizzi vicini ai margini dello spazio di indirizzamento}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.8}{Fuzzing}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{Conclusioni}{}% 18

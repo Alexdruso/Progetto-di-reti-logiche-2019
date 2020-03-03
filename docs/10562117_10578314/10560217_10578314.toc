@@ -1,0 +1,21 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Introduzione}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Architettura}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Control Unit (CU)}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}RAM driver}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Loader}{3}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Memory}{4}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Encoder}{4}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Risultati sperimentali}{6}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Test benches}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Primo indirizzo di ogni working zone}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Offset della prima working zone}{7}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Indirizzo non appartenente a nessuna working zone}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Esecuzioni successive senza cambio di working zones}{7}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Esecuzioni successive con cambio di working zones}{7}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Indirizzi vicini ai margini delle working zones}{8}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Indirizzi vicini ai margini dello spazio di indirizzamento}{8}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Fuzzing}{8}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Conclusioni}{9}{chapter.5}%
