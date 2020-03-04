@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  3 MAR 2020 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  4 MAR 2020 10:32
 entering extended mode
 **./10560217_10578314.tex
 (10560217_10578314.tex
@@ -456,11 +456,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 Capitolo 2.
-<schematics.png, id=119, 1422.81563pt x 322.20375pt>
+<schematics.png, id=119, 1423.3175pt x 323.2075pt>
 File: schematics.png Graphic file (type png)
 <use schematics.png>
 Package pdftex.def Info: schematics.png  used on input line 122.
-(pdftex.def)             Requested size: 455.3103pt x 103.1073pt.
+(pdftex.def)             Requested size: 455.47092pt x 103.42851pt.
 <stati_cu.png, id=120, 612.03656pt x 192.72pt>
 File: stati_cu.png Graphic file (type png)
 <use stati_cu.png>
@@ -527,7 +527,7 @@ pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 10560217_10578314.pdf (11 pages, 251441 bytes).
+Output written on 10560217_10578314.pdf (11 pages, 249447 bytes).
 PDF statistics:
  468 PDF objects out of 1000 (max. 8388607)
  37 named destinations out of 1000 (max. 500000)
