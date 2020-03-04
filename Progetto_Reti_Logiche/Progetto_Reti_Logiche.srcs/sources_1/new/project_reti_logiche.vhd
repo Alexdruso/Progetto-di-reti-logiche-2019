@@ -61,18 +61,20 @@ component Loader
     port(
         clk, rst, load_en: in std_logic;
 		data_ram_in: in std_logic_vector(7 downto 0);
-		loader_done, reg_we: out std_logic;
+		loader_done: out std_logic;
+		--reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
-		addr_reg: out std_logic_vector(2 downto 0);
+		addr_reg: out std_logic_vector(7 downto 0);
 		data_from_loader: out std_logic_vector(6 downto 0)
     );
 end component;
 
 component Memory
     port(
-        addr_reg: in std_logic_vector(2 downto 0);  
+        addr_reg: in std_logic_vector(7 downto 0);  
         data_in: in std_logic_vector(6 downto 0);
-        clk, rst, we: in std_logic;
+        clk, rst: in std_logic;
+        --we: in std_logic;
         data0: out std_logic_vector(6 downto 0);
         data1: out std_logic_vector(6 downto 0);
         data2: out std_logic_vector(6 downto 0);
@@ -107,9 +109,9 @@ end component;
 signal loader_done: std_logic;
 signal load_en: std_logic;
 signal write_en: std_logic;
-signal reg_we: std_logic;
+--signal reg_we: std_logic;
 signal addr_ram_from_loader: std_logic_vector(3 downto 0);
-signal addr_reg:  std_logic_vector(2 downto 0);
+signal addr_reg:  std_logic_vector(7 downto 0);
 signal data_from_loader: std_logic_vector(6 downto 0);
 signal data0: std_logic_vector(6 downto 0);
 signal data1: std_logic_vector(6 downto 0);
@@ -138,7 +140,7 @@ begin
         load_en=>load_en,
         data_ram_in=>i_data,
         loader_done=>loader_done,
-        reg_we=>reg_we,
+        --reg_we=>reg_we,
         addr_ram_from_loader=>addr_ram_from_loader,
         addr_reg=>addr_reg,
         data_from_loader=>data_from_loader
@@ -149,7 +151,7 @@ begin
         data_in=>data_from_loader,
         clk=>i_clk, 
         rst=>i_rst, 
-        we=>reg_we,
+        --we=>reg_we,
         data0=>data0,
         data1=>data1,
         data2=>data2,

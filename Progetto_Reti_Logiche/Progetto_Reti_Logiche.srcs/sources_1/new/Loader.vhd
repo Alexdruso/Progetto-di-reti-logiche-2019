@@ -36,9 +36,11 @@ entity Loader is
     port(
         clk,rst,load_en: in std_logic;
 		data_ram_in: in std_logic_vector(7 downto 0);
-		loader_done, reg_we: out std_logic;
+		loader_done : out std_logic; 
+		--reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
-		addr_reg: out std_logic_vector(2 downto 0);
+		--addr_reg: out std_logic_vector(2 downto 0);
+		addr_reg: out std_logic_vector(7 downto 0);
 		data_from_loader: out std_logic_vector(6 downto 0)
 		);
 end Loader;
@@ -88,95 +90,95 @@ begin
             when load_0 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '-';
+                --reg_we <= '-';
                 addr_ram_from_loader <= "0000";
-                addr_reg <= "---";
+                addr_reg <= "--------";
                 --next_data_from_loader <= "--------";
                 --update_buffer <= '-';
             when load_1 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "0001";
-                addr_reg <= "000";
+                addr_reg <= "00000001";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_2 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "0010";
-                addr_reg <= "001";
+                addr_reg <= "00000010";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_3 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "0011";
-                addr_reg <= "010";
+                addr_reg <= "00000100";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_4 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "0100";
-                addr_reg <= "011";
+                addr_reg <= "00001000";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_5 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "0101";
-                addr_reg <= "100";
+                addr_reg <= "00010000";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_6 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "0110";
-                addr_reg <= "101";
+                addr_reg <= "00100000";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_7 =>
                 loader_done <= '0';
                 --driver_loader_en <= '1';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "0111";
-                addr_reg <= "110";
+                addr_reg <= "01000000";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_first_addr =>
                 loader_done <= '0';
                 --driver_loader_en <= '0';
-                reg_we <= '1';
+                --reg_we <= '1';
                 addr_ram_from_loader <= "1000";
-                addr_reg <= "111";
+                addr_reg <= "10000000";
                 --next_data_from_loader <= data_ram_in;
                 --update_buffer <= '1';
             when load_addr_done =>
                 loader_done <= '1';
                 --driver_loader_en <= '0';
-                reg_we <= '0';
+                --reg_we <= '0';
                 addr_ram_from_loader <= "1000";
-                addr_reg <= "---";
+                addr_reg <= "00000000";
                 --next_data_from_loader <= next_data_from_loader;
                 --update_buffer <= '1';
             when prepare_next_load =>
                 loader_done <= '0';
-                reg_we <= '0';
+                --reg_we <= '0';
                 addr_ram_from_loader <= "1000";
-                addr_reg <= "---";
+                addr_reg <= "00000000";
                 --update_buffer <='1'; --giusto così?        
             when others =>
                 loader_done <= '-';
                 --driver_loader_en <= '-';
-                reg_we <= '-';
+                --reg_we <= '-';
                 addr_ram_from_loader <= "----";
-                addr_reg <= "---";
+                addr_reg <= "--------";
                 --next_data_from_loader <= next_data_from_loader;
                 --update_buffer <= '0';
         end case;
