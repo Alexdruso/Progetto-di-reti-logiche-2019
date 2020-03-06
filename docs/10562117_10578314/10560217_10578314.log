@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  6 MAR 2020 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  6 MAR 2020 12:11
 entering extended mode
 **./10560217_10578314.tex
 (10560217_10578314.tex
@@ -584,8 +584,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
  (10560217_10578314.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
-Package rerunfilecheck Info: File `10560217_10578314.out' has not changed.
-(rerunfilecheck)             Checksum: 04FA23114A0D1609CC71FB53290BD56F;1227.
+
+
+Package rerunfilecheck Warning: File `10560217_10578314.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `10560217_10578314.out':
+(rerunfilecheck)             Before: 6FD3E5CFB24F5238ADF22E41FA7380C9;1245
+(rerunfilecheck)             After:  04FA23114A0D1609CC71FB53290BD56F;1227.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  9864 strings out of 481556
@@ -608,7 +618,7 @@ pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 10560217_10578314.pdf (12 pages, 256063 bytes).
+Output written on 10560217_10578314.pdf (12 pages, 256060 bytes).
 PDF statistics:
  474 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)
