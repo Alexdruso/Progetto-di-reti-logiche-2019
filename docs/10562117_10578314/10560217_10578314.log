@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  5 MAR 2020 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  6 MAR 2020 11:33
 entering extended mode
 **./10560217_10578314.tex
 (10560217_10578314.tex
@@ -324,39 +324,74 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip60
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdfpages\pdfpages.sty"
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count269
+\calc@Bcount=\count270
+\calc@Adimen=\dimen162
+\calc@Bdimen=\dimen163
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count271
+\calc@Cskip=\skip63
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/eso-pic\eso-pic.sty"
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+)
+\AM@pagewidth=\dimen164
+\AM@pageheight=\dimen165
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdfpages\pppdftex.def"
+File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box49
+\AM@global@opts=\toks22
+\AM@pagecnt=\count272
+\AM@toc@title=\toks23
+\c@AM@survey=\count273
+\AM@templatesizebox=\box50
+)
 (10560217_10578314.aux)
 \openout1 = `10560217_10578314.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count269
-\scratchdimen=\dimen162
-\scratchbox=\box49
-\nofMPsegments=\count270
-\nofMParguments=\count271
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count272
-\MPscratchDim=\dimen163
-\MPnumerator=\count273
-\makeMPintoPDFobject=\count274
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count274
+\scratchdimen=\dimen166
+\scratchbox=\box51
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen167
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks25
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -396,13 +431,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 63.
-LaTeX Info: Redefining \it@ccap on input line 63.
+LaTeX Info: Redefining \it@ocap on input line 66.
+LaTeX Info: Redefining \it@ccap on input line 66.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring OFF on input line 63.
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring OFF on input line 66.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -412,20 +447,29 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count275
+\c@section@level=\count280
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+LaTeX Info: Redefining \nameref on input line 66.
 
 (10560217_10578314.out) (10560217_10578314.out)
 \@outlinefile=\write3
 \openout3 = `10560217_10578314.out'.
 
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdflscape\pdflscape.sty"
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
 <logo1.png, id=75, 180.675pt x 180.675pt>
 File: logo1.png Graphic file (type png)
 <use logo1.png>
-Package pdftex.def Info: logo1.png  used on input line 96.
+Package pdftex.def Info: logo1.png  used on input line 99.
 (pdftex.def)             Requested size: 108.40582pt x 108.40582pt.
  [1
 
@@ -433,7 +477,8 @@ Package pdftex.def Info: logo1.png  used on input line 96.
 
 
 {C:/Users/aless/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo1.png
->] (10560217_10578314.toc
+>]
+(10560217_10578314.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -442,15 +487,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `10560217_10578314.toc'.
 
-
-[2
+ [2
 
 ]
 Capitolo 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 115.
+(Font)              <8> on input line 118.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 115.
+(Font)              <6> on input line 118.
 [1
 
 
@@ -459,17 +503,17 @@ Capitolo 2.
 <schematics.png, id=119, 1891.065pt x 463.7325pt>
 File: schematics.png Graphic file (type png)
 <use schematics.png>
-Package pdftex.def Info: schematics.png  used on input line 122.
-(pdftex.def)             Requested size: 605.15317pt x 148.39742pt.
+Package pdftex.def Info: schematics.png  used on input line 125.
+(pdftex.def)             Requested size: 491.66531pt x 120.5676pt.
 
-Overfull \hbox (124.85817pt too wide) in paragraph at lines 122--123
+Overfull \hbox (11.37032pt too wide) in paragraph at lines 125--126
  [][] 
  []
 
 <stati_cu.png, id=120, 612.03656pt x 192.72pt>
 File: stati_cu.png Graphic file (type png)
 <use stati_cu.png>
-Package pdftex.def Info: stati_cu.png  used on input line 137.
+Package pdftex.def Info: stati_cu.png  used on input line 140.
 (pdftex.def)             Requested size: 459.02629pt x 144.53963pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -480,20 +524,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <stati_loader.png, id=129, 516.7305pt x 152.9715pt>
 File: stati_loader.png Graphic file (type png)
 <use stati_loader.png>
-Package pdftex.def Info: stati_loader.png  used on input line 158.
+Package pdftex.def Info: stati_loader.png  used on input line 161.
 (pdftex.def)             Requested size: 465.05315pt x 137.67305pt.
  [3 <./stati_cu.png> <./stati_loader.png>] [4] [5]
 Capitolo 3.
 <waveforms_first_encode.PNG, id=149, 1215.03937pt x 134.75343pt>
 File: waveforms_first_encode.PNG Graphic file (type png)
 <use waveforms_first_encode.PNG>
-Package pdftex.def Info: waveforms_first_encode.PNG  used on input line 193.
+Package pdftex.def Info: waveforms_first_encode.PNG  used on input line 196.
 (pdftex.def)             Requested size: 461.71976pt x 51.20683pt.
 <waveforms_consecutive_encode.PNG, id=150, 783.67781pt x 147.55125pt>
 File: waveforms_consecutive_encode.PNG Graphic file (type png)
 <use waveforms_consecutive_encode.PNG>
-Package pdftex.def Info: waveforms_consecutive_encode.PNG  used on input line 1
-99.
+Package pdftex.def Info: waveforms_consecutive_encode.PNG  used on input line 2
+02.
 (pdftex.def)             Requested size: 313.46556pt x 59.01944pt.
 [6
 
@@ -503,25 +547,54 @@ Capitolo 4.
 
 ] [8]
 Capitolo 5.
+File: schematics.png Graphic file (type png)
+<use schematics.png>
+Package pdftex.def Info: schematics.png  used on input line 251.
+(pdftex.def)             Requested size: 1891.06041pt x 463.73135pt.
+File: schematics.png Graphic file (type png)
+<use schematics.png>
+Package pdftex.def Info: schematics.png  used on input line 251.
+(pdftex.def)             Requested size: 1891.06041pt x 463.73135pt.
+File: schematics.png Graphic file (type png)
+<use schematics.png>
+Package pdftex.def Info: schematics.png  used on input line 251.
+(pdftex.def)             Requested size: 1891.06041pt x 463.73135pt.
+File: schematics.png Graphic file (type png)
+<use schematics.png>
+Package pdftex.def Info: schematics.png  used on input line 251.
+(pdftex.def)             Requested size: 794.99214pt x 194.95029pt.
 [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
+File: schematics.png Graphic file (type png)
+<use schematics.png>
+Package pdftex.def Info: schematics.png  used on input line 251.
+(pdftex.def)             Requested size: 794.99214pt x 194.95029pt.
+File: schematics.png Graphic file (type png)
+<use schematics.png>
+Package pdftex.def Info: schematics.png  used on input line 251.
+(pdftex.def)             Requested size: 794.99214pt x 194.95029pt.
+File: schematics.png Graphic file (type png)
+<use schematics.png>
+Package pdftex.def Info: schematics.png  used on input line 251.
+(pdftex.def)             Requested size: 794.99214pt x 194.95029pt.
+ [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
  (10560217_10578314.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
 Package rerunfilecheck Info: File `10560217_10578314.out' has not changed.
 (rerunfilecheck)             Checksum: 04FA23114A0D1609CC71FB53290BD56F;1227.
  ) 
 Here is how much of TeX's memory you used:
- 9099 strings out of 481556
- 145808 string characters out of 2923634
- 522475 words of memory out of 3000000
- 24142 multiletter control sequences out of 15000+200000
+ 9864 strings out of 481556
+ 157881 string characters out of 2923634
+ 537603 words of memory out of 3000000
+ 24880 multiletter control sequences out of 15000+200000
  542967 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,45p,973b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,18n,45p,973b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 tcrm1000.pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecbx1440.pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
@@ -535,9 +608,9 @@ pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 10560217_10578314.pdf (11 pages, 255463 bytes).
+Output written on 10560217_10578314.pdf (12 pages, 256063 bytes).
 PDF statistics:
- 468 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

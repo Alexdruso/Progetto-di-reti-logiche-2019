@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Template for lab reports used at STIMA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -57,6 +57,9 @@
 
 % Separates the first part of the report/thesis in Roman numerals
 \frontmatter
+
+% Introduces a way to insert an image full page
+\usepackage{pdfpages}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starts the document
@@ -119,8 +122,8 @@ A partire da queste premesse, si è scelto di progettare l'architettura trattata
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.32]{schematics.png}
-    \caption{Schema funzionale dell'architettura}
+    \includegraphics[scale=0.26]{schematics.png}
+    \caption{Schema funzionale dell'architettura, ingrandimento 					a fine documento}
     \label{fig:schematic}
 \end{figure}{}
 
@@ -244,6 +247,8 @@ Il test bench verifica che una lunga sequenza casuale di indirizzi venga codific
 Come ben dimostrato dai risultati sperimentali e dal report di sintesi, l'architettura qui descritta permette prestazioni considerevoli negli scenari d’uso più tipici, grazie alla già trattata adozione di registri interni e alla parallelizzazione della codifica vera e propria. Si è inoltre sperimentalmente verificato che la velocità di esecuzione dimostrata dall’architettura permetta un considerevole aumento della frequenza di clock (almeno di un ordine di grandezza), permettendo quindi ulteriori guadagni nel tempo di esecuzione.
 In conclusione si considera l'obiettivo di un’ottimizzazione per gli scenari d’uso più tipici pienamente raggiunto.\\
 Una possibile ottimizzazione potrebbe riguardare la fase di caricamento degli indirizzi base delle working zones: attualmente si caricano tutti gli 8 indirizzi base per poi confrontarli con l’indirizzo da codificare, mentre sarebbe possibile interrompere il caricamento non appena una execution lane rileva un match; sarebbe necessario aggiungere un bit per ciascun registro per tenere conto se il registro contiene un dato valido o non è ancora stato caricato, per poi modificare la macchina a stati del loader per consentire di riprendere il caricamento degli indirizzi base da una posizione successiva alla prima, in caso di successive richieste di codifica.
+
+\includepdf[landscape=true]{schematics.png}
 
 
 \pagebreak
