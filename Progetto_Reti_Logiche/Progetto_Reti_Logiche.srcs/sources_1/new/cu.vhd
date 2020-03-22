@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 15.02.2020 20:48:16
--- Design Name: 
--- Module Name: cu - behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -31,7 +10,7 @@ entity CU is
 end CU;
 
 architecture Behavioral of CU is
-type state_type is (wait_start,load, write_result, done_up); --e se riducessimo gli stati a stop, start e done?
+type state_type is (wait_start,load, write_result, done_up);
 signal next_state, current_state : state_type;
 begin
     process(clk, rst)

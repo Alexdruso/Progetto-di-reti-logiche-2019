@@ -1,35 +1,5 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 17.02.2020 15:17:40
--- Design Name: 
--- Module Name: Loader - Dataflow
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Loader is
         
@@ -37,9 +7,7 @@ entity Loader is
         clk,rst,load_en: in std_logic;
 		data_ram_in: in std_logic_vector(7 downto 0);
 		loader_done : out std_logic; 
-		--reg_we: out std_logic;
 		addr_ram_from_loader: out std_logic_vector(3 downto 0);
-		--addr_reg: out std_logic_vector(2 downto 0);
 		addr_reg: out std_logic_vector(7 downto 0);
 		data_from_loader: out std_logic_vector(6 downto 0)
 		);
@@ -47,33 +15,10 @@ end Loader;
 
 architecture Dataflow of Loader is
 
---component Loader_counter is
---    port(
---        clk,rst,loader_wz_en,loader_encode_en: in std_logic;
---        addr : out std_logic_vector(3 downto 0);
---        loader_done,encode_read_done : out std_logic
---        );
---end component;
-
---component Register_D
-  --  port(
-    --    in1 : in std_logic_vector(6 downto 0);
-      --  clk, rst, load : in std_logic; 
-     --   out1 : out std_logic_vector(6 downto 0)
---        );
---end component;        
-
-
 signal addr : std_logic_vector(3 downto 0);
 type state_type is (load_0, load_1, load_2, load_3, load_4, load_5, load_6, load_7, load_first_addr, load_addr_done, prepare_next_load );
 signal next_state, current_state : state_type;
---signal next_data_from_loader : std_logic_vector(7 downto 0);
---signal update_buffer : std_logic;
---signal clk_negated: std_logic;
 begin
-    --clk_negated <= not clk;
-    
-    --data_buffer: Register_D port map(in1=>data_ram_in(6 downto 0),clk=>clk_negated,rst=>rst,load=>update_buffer,out1=>data_from_loader);
     data_from_loader <= data_ram_in(6 downto 0);
     process(clk, rst)
     begin
@@ -89,98 +34,52 @@ begin
         case current_state is
             when load_0 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '-';
                 addr_ram_from_loader <= "0000";
                 addr_reg <= "--------";
-                --next_data_from_loader <= "--------";
-                --update_buffer <= '-';
             when load_1 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "0001";
                 addr_reg <= "00000001";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_2 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "0010";
                 addr_reg <= "00000010";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_3 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "0011";
                 addr_reg <= "00000100";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_4 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "0100";
                 addr_reg <= "00001000";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_5 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "0101";
                 addr_reg <= "00010000";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_6 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "0110";
                 addr_reg <= "00100000";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_7 =>
                 loader_done <= '0';
-                --driver_loader_en <= '1';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "0111";
                 addr_reg <= "01000000";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_first_addr =>
                 loader_done <= '0';
-                --driver_loader_en <= '0';
-                --reg_we <= '1';
                 addr_ram_from_loader <= "1000";
                 addr_reg <= "10000000";
-                --next_data_from_loader <= data_ram_in;
-                --update_buffer <= '1';
             when load_addr_done =>
                 loader_done <= '1';
-                --driver_loader_en <= '0';
-                --reg_we <= '0';
                 addr_ram_from_loader <= "1000";
                 addr_reg <= "00000000";
-                --next_data_from_loader <= next_data_from_loader;
-                --update_buffer <= '1';
             when prepare_next_load =>
                 loader_done <= '0';
-                --reg_we <= '0';
                 addr_ram_from_loader <= "1000";
                 addr_reg <= "00000000";
-                --update_buffer <='1'; --giusto così?        
             when others =>
                 loader_done <= '-';
-                --driver_loader_en <= '-';
-                --reg_we <= '-';
                 addr_ram_from_loader <= "----";
                 addr_reg <= "--------";
-                --next_data_from_loader <= next_data_from_loader;
-                --update_buffer <= '0';
         end case;
     end process;
 
@@ -221,14 +120,4 @@ begin
                 next_state <= current_state;
         end case;
     end process;
-
-    --data_from_loader <= data_ram_in;
-    --driver_loader_en <= loader_wz_en or loader_encode_en;
-    --LC: Loader_counter port map(clk=>clk,rst=>rst,
-    --                            loader_wz_en=>loader_wz_en,loader_encode_en=>loader_encode_en,
-    --                           addr=>addr,loader_done=>loader_done, encode_read_done=>reg_we);
-    --addr_reg <= addr(2 downto 0);
-    --addr_ram_from_loader <= addr;
-    
-        
 end Dataflow;

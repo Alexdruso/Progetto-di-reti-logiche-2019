@@ -1,36 +1,5 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 20.02.2020 21:43:51
--- Design Name: 
--- Module Name: project_reti_logiche - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity project_reti_logiche is
     Port (
@@ -74,7 +43,6 @@ component Memory
         addr_reg: in std_logic_vector(7 downto 0);  
         data_in: in std_logic_vector(6 downto 0);
         clk, rst: in std_logic;
-        --we: in std_logic;
         data0: out std_logic_vector(6 downto 0);
         data1: out std_logic_vector(6 downto 0);
         data2: out std_logic_vector(6 downto 0);
@@ -109,7 +77,6 @@ end component;
 signal loader_done: std_logic;
 signal load_en: std_logic;
 signal write_en: std_logic;
---signal reg_we: std_logic;
 signal addr_ram_from_loader: std_logic_vector(3 downto 0);
 signal addr_reg:  std_logic_vector(7 downto 0);
 signal data_from_loader: std_logic_vector(6 downto 0);
@@ -140,7 +107,6 @@ begin
         load_en=>load_en,
         data_ram_in=>i_data,
         loader_done=>loader_done,
-        --reg_we=>reg_we,
         addr_ram_from_loader=>addr_ram_from_loader,
         addr_reg=>addr_reg,
         data_from_loader=>data_from_loader
@@ -151,7 +117,6 @@ begin
         data_in=>data_from_loader,
         clk=>i_clk, 
         rst=>i_rst, 
-        --we=>reg_we,
         data0=>data0,
         data1=>data1,
         data2=>data2,

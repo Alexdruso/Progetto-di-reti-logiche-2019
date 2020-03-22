@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  6 MAR 2020 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.22)  22 MAR 2020 18:50
 entering extended mode
 **./10560217_10578314.tex
 (10560217_10578314.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14>
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\book.cls"
 Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\bk10.clo"
@@ -27,7 +27,7 @@ Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
@@ -62,8 +62,8 @@ Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -72,7 +72,7 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
-Package: iftex 2019/11/07 v1.0c TeX engine tests
+Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count176
 \Gm@cntv=\count177
@@ -85,20 +85,20 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@layoutheight=\dimen142
 \Gm@layouthoffset=\dimen143
 \Gm@layoutvoffset=\dimen144
-\Gm@dimlist=\toks17
+\Gm@dimlist=\toks18
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty"
 ("C:\Program Files\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
-Package: expl3 2020-02-14 L3 programming layer (loader) 
+Package: expl3 2020-03-06 L3 programming layer (loader) 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count179
 \l__pdf_internal_box=\box45
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty"
-Package: xparse 2020-02-14 L3 Experimental document command parser
+Package: xparse 2020-03-06 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count180
 \g__xparse_grabber_int=\count181
 \l__xparse_m_args_int=\count182
@@ -110,10 +110,10 @@ Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2020/02/14 3.40 The Babel package
+Package: babel 2020/02/28 3.41 The Babel package
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\switch.def"
-File: switch.def 2020/02/14 3.40 Babel switching mechanism
+File: switch.def 2020/02/28 3.41 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
@@ -126,7 +126,7 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 Language: english 2017/06/06 v3.3r English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2020/02/14 3.40 Babel common definitions
+File: babel.def 2020/02/28 3.41 Babel common definitions
 \babel@savecnt=\count184
 \U@D=\dimen145
 
@@ -171,7 +171,7 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \aftertitleunit=\skip59
 \ttl@plus=\dimen146
 \ttl@minus=\dimen147
-\ttl@toksa=\toks18
+\ttl@toksa=\toks19
 \titlewidth=\dimen148
 \titlewidthlast=\dimen149
 \titlewidthfirst=\dimen150
@@ -179,12 +179,12 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 ("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count190
-\float@exts=\toks19
+\float@exts=\toks20
 \float@box=\box47
-\@float@everytoks=\toks20
+\@float@everytoks=\toks21
 \@floatcapt=\box48
 )
-\@float@every@table=\toks21
+\@float@every@table=\toks22
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty"
 Package: caption 2020/01/03 v3.4h Customizing captions (AR)
@@ -353,9 +353,9 @@ Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box49
-\AM@global@opts=\toks22
+\AM@global@opts=\toks23
 \AM@pagecnt=\count272
-\AM@toc@title=\toks23
+\AM@toc@title=\toks24
 \c@AM@survey=\count273
 \AM@templatesizebox=\box50
 )
@@ -386,12 +386,12 @@ LaTeX Font Info:    ... okay on input line 66.
 \scratchbox=\box51
 \nofMPsegments=\count275
 \nofMParguments=\count276
-\everyMPshowfont=\toks24
+\everyMPshowfont=\toks25
 \MPscratchCnt=\count277
 \MPscratchDim=\dimen167
 \MPnumerator=\count278
 \makeMPintoPDFobject=\count279
-\everyMPtoPDFconversion=\toks25
+\everyMPtoPDFconversion=\toks26
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -476,8 +476,8 @@ Package pdftex.def Info: logo1.png  used on input line 99.
 
 
 
-{C:/Users/aless/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo1.png
->]
+{C:/Users/Andrea/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo1.pn
+g>]
 (10560217_10578314.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 6.
@@ -492,9 +492,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 Capitolo 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 118.
+(Font)              <8> on input line 117.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 118.
+(Font)              <6> on input line 117.
 [1
 
 
@@ -588,27 +588,27 @@ Package rerunfilecheck Info: File `10560217_10578314.out' has not changed.
 (rerunfilecheck)             Checksum: 04FA23114A0D1609CC71FB53290BD56F;1227.
  ) 
 Here is how much of TeX's memory you used:
- 9864 strings out of 481556
- 157881 string characters out of 2923634
- 537599 words of memory out of 3000000
- 24880 multiletter control sequences out of 15000+200000
+ 9879 strings out of 480934
+ 158242 string characters out of 2909679
+ 541778 words of memory out of 3000000
+ 25517 multiletter control sequences out of 15000+200000
  542967 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,18n,45p,973b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
-tcrm1000.pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecbx1440.pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\aless\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\aless\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\aless\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Us
-ers\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.
-pk> <C:\Users\aless\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 10560217_10578314.pdf (12 pages, 256040 bytes).
+ 41i,18n,45p,1024b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Andrea\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
+\tcrm1000.pk> <C:\Users\Andrea\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ecbx1440.pk> <C:\Users\Andrea\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Andrea\AppData\Local\MiKTeX\2.9\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Andrea\AppData\Local\M
+iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Andrea\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\
+Andrea\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk>
+ <C:\Users\Andrea\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
+cbx2488.pk> <C:\Users\Andrea\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on 10560217_10578314.pdf (12 pages, 256479 bytes).
 PDF statistics:
  474 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)
