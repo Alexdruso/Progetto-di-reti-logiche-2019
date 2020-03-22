@@ -17,6 +17,9 @@
 \setlength{\parskip}{\smallskipamount}
 \setlength{\parindent}{0pt}
 
+% Adds subfigures
+\usepackage{subcaption} 
+
 % Set page margins
 \usepackage[top=100pt,bottom=100pt,left=68pt,right=66pt]{geometry}
 
@@ -115,8 +118,22 @@
 
 
 L’obiettivo dell’architettura qui trattata è la codifica di un indirizzo di memoria ad 8 bit secondo il metodo delle working zones. Un approccio di questo tipo si basa su un’idea espressa in letteratura\footnote{\label{paper_citation}E. Musoll, T. Lang and J. Cortadella, "Working-zone encoding for reducing the energy in microprocessor address buses," in IEEE Transactions on Very Large Scale Integration (VLSI) Systems, vol. 6, no. 4, pp. 568-572, Dec. 1998.} in cui si osserva che codificare un indirizzo in termini di offset rispetto ad un insieme limitato di indirizzi più frequentemente usati (inferiti a runtime) permette un considerevole risparmio energetico nella comunicazione con il bus, pur mantenendo una codifica più compatta rispetto al semplice one-hot grazie a considerazioni sulla località degli indirizzi.\\
-Come da specifica funzionale del progetto, gli indirizzi base di 8 working zones sono memorizzati nelle prime 8 celle di una RAM esterna al circuito e restano immutati durante l’esecuzione; l’indirizzo da codificare risiede nella nona posizione della RAM esterna e la codifica deve essere scritta nella decima. L’operazione di codifica vera e propria inizia con il confronto dell’indirizzo in input con gli indirizzi base delle working zones. Nel caso in cui l’offset con una di esse sia compreso tra 0 e 3, il risultato viene composto secondo la formula ‘1’ \& WZ\_NUMBER \& ONE\_HOT\_OFFSET (in cui WZ\_NUMBER è codificato in binario naturale e ONE\_HOT\_OFFSET è codificato in one-hot); altrimenti, il risultato è formato concatenando a un bit ‘0’ l’indirizzo in input immutato. Da specifica viene inoltre garantita l’assenza di sovrapposizioni tra working zones e la loro corretta formattazione, con il bit più significativo sempre posto a ‘0’.\\
+Come da specifica funzionale del progetto, gli indirizzi base di 8 working zones sono memorizzati nelle prime 8 celle di una RAM esterna al circuito e restano immutati durante l’esecuzione; l’indirizzo da codificare risiede nella nona posizione della RAM e la codifica deve essere scritta nella decima. L’operazione di codifica vera e propria inizia con il confronto dell’indirizzo in input con gli indirizzi base delle working zones. Nel caso in cui l’offset con una di esse sia compreso tra 0 e 3, il risultato viene composto secondo la formula ‘1’ \& WZ\_NUMBER \& ONE\_HOT\_OFFSET (in cui WZ\_NUMBER è codificato in binario naturale e ONE\_HOT\_OFFSET è codificato in one-hot); altrimenti, il risultato è formato concatenando a un bit ‘0’ l’indirizzo in input immutato. Da specifica viene inoltre garantita l’assenza di sovrapposizioni tra working zones e la loro corretta formattazione, con il bit più significativo sempre posto a ‘0’.\\
 A partire da queste premesse, si è voluto aggiungere come specifiche non funzionali l’ottimizzazione della velocità di codifica e la limitazione, per quanto possibile, delle comunicazioni con la RAM, dispendiose da un punto di vista energetico e temporale. Si è inoltre scelto di focalizzare le ottimizzazioni citate per esecuzioni lunghe (in cui cioè è richiesta la codifica consecutiva di un gran numero di indirizzi relativamente a working zones immutate), considerandole più probabili rispetto ad esecuzioni brevi.
+
+\begin{figure}[h!]
+  \begin{subfigure}[h!]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{esempio_in_wz.png}
+    \caption{Esempio di esecuzione con corrispondenza}
+    \label{fig:1}
+  \end{subfigure}
+  %
+  \begin{subfigure}[h!]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{esempio_fuori_wz.png}
+    \caption{Esempio di esecuzione senza corrispondenza}
+    \label{fig:2}
+  \end{subfigure}
+\end{figure}
 
 \chapter{Architettura}
 
